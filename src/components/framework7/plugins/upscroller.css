@@ -1,0 +1,28 @@
+.upscroller {
+	-webkit-transform: translate3d(45px,0,0);
+	transform: translate3d(45px,0,0);
+	transition: -webkit-transform 0.5s;
+	position: fixed;
+	right:50px;
+	bottom:-45px;
+	z-index:9999 !important;
+	height: 34px;
+	width: 34px;
+	
+	font-size:14px;
+	text-align: center;
+	/*padding: 2px;
+	padding-top:3px;*/
+	color: #fff !important;
+	cursor: pointer;
+	background:url(../../../style/img/returntop@2x.png) no-repeat center center;
+	background-size: 100% 100%;
+	border-radius: 4px;
+	
+	/*background-size: contain;*/
+}
+
+.upscroller.show {
+	-webkit-transform: translate3d(45px,-90px,0);
+	transform: translate3d(45px,-90px,0);
+}

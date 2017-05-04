@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="with-statusbar-overlay">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--
+        @require "framework7/framework7.ios.css"
+    -->
+
+    <!--STYLE_PLACEHOLDER-->
+    <title>凯叔讲故事</title>
+</head>
+<body>
+     <div class="statusbar-overlay"></div>
+     <div class="views toolbar-through">
+        <div class="view view-main">
+            <div class="pages">
+                 <div data-page="leader" class="page no-toolbar toolbar-fixed">
+                   
+                    <div class="page-content">
+                      <div class="leader_bg box-container box-container-free">
+                        <div class="loadbtn flex-container-vertical " id="loadbtn">
+                          <div class="load-icon"> <img src="./style/img/1.pic_hd.jpg" alt=""> </div>
+                          <div class="download-content">
+                              <p class="content-main-title">
+                                  <h1>没有故事不成童年</h1>
+                              </p>
+                              <p class="content-sub-title">
+                                  凯叔讲故事
+                              </p>
+                              <!-- <p class="content-text">
+                                  v 1.0.0
+                              </p> -->
+                          </div>
+                          <a href="javascript:void(0)" id="iphone" class="external iphonebtn"><i class="iphone"></i><span>下载iOS版</span></a>
+                          <a href="javascript:void(0)" id="android" class="external androidbtn"><i class="android"></i><span>下载Android版</span></a>
+                        </div>
+                      </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+             
+     </div>
+    <div id="modal-container"></div>
+<!--     <script src="http://s11.cnzz.com/z_stat.php?id=1259274367&web_id=1259274367" language="JavaScript"></script>
+ -->    <script type="text/javascript" src="mod.js"></script>    
+    <!--SCRIPT_PLACEHOLDER-->
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <script type="text/javascript">
+        require('main');
+    </script>
+    <script type="text/javascript">
+
+       // var isIos = Framework7.prototype.device.ios === true;
+       // var isAndroid = Framework7.prototype.device.android === true;
+       //  if($("#loadbtn a").length>0){
+       //      if(isIos){ 
+       //          $('#android').hide();
+       //      }else if(isAndroid){     
+       //          $('#iphone').hide(); 
+       //      }
+       //  }
+      document.getElementById('iphone').onclick = function(e){  
+
+         if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+            var loadDateTime = new Date();
+            window.setTimeout(function() {
+              var timeOutDateTime = new Date();
+              if (timeOutDateTime - loadDateTime < 5000) {
+                window.location = "http://fir.im/ksios";
+              } else {
+                window.close();
+              }
+            },1500);
+           
+            window.location = "ksstory://token=123abc&registerd=1";
+            
+          }
+         
+    };  
+
+    document.getElementById('android').onclick = function(e){ 
+
+         if(navigator.userAgent.match(/android/i)) {
+            var state = null;
+            try {
+              state = window.open("ksstory://com.kswh.ksstory/openwith", '_blank');
+            } catch(e) {}
+            if (state) {
+              window.close();
+            } 
+           
+            setTimeout(function(){
+              window.location = "http://fir.im/android103";
+            },1000);
+          
+          }
+         
+    };  
+
+    </script>
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?1db2f66ca5491f4e2727cc242a2f5535";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+
+</body>
+</html>

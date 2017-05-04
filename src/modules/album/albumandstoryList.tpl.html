@@ -1,0 +1,58 @@
+
+ {{#storyList}}
+ {{#rif this.type "==" "2"}}
+    {{#with storyvalue}}
+  <li class="hotsearch-list-ev  box-container">
+    <div class ="J_goCurrentPlayer hotsearch-list-ev-center">
+
+        <a class="hotsearch-icon" data-href="{{../../../HOST}}/page/player.html?type=tag&typeId={{../../../typeId}}&storyId={{storyid}}&storyName={{storyname}}&albumName={{../../../albumName}}" >
+          <span class ="hotsearch-name-icon">
+            <img src="{{iconurl}}" alt="">
+          </span>
+        </a>
+        <a  class="centertxt" data-href="{{../../../HOST}}/page/player.html?type=tag&typeId={{../../../typeId}}&storyId={{storyid}}&storyName={{storyname}}&albumName={{../../../albumName}}" href="#">
+           <div class="hotsearch-name"><span>{{storyname}}</span></div>
+           <div class="hotsearch-detail">
+              <div class="detail-number"><i></i><span>{{../../../playCount}}</span></div>
+               <div class="detail-often"><i></i><span>{{../../../storyTime}}</span></div>
+           </div>
+        </a>
+          <!-- <span  data-href="{{../HOST}}/page/appDownload.html" href="#" class="app-download-link external box-container-sub hotsearch-tip  flex-container-vertical link ">
+                <i class="hotsearch-tip-icon"></i>
+          </span>-->
+          <span  data-href="{{../HOST}}/page/appDownload.html" href="#"  class="app-download-link external  hotsearch-tip  link downapp-link"  data-type="tagPage-down" data-alisname="下载">
+            <i class="hotsearch-load-icon"></i>
+          </span>
+    </div>
+  </li>
+  {{/with}}
+  {{else}}
+    {{#with ablumvalue}}
+
+  <li class="hotsearch-list-ev  box-container">
+    <div class ="box-container-free hotsearch-list-ev-center box-container">
+
+        <a class="hotsearch-icon" data-href="{{../../../HOST}}/page/albumPage.html?type=album&id={{ablumid}}&albumName={{ablumname}}" href="#">
+          <span class ="hotsearch-name-icon">
+            <img src="{{iconurl}}" alt="">
+          </span>
+          <div class="hotsearch-albumTag">专辑</div>
+        </a>
+        <a  class="centertxt" data-href="{{../../../HOST}}/page/albumPage.html?type=album&id={{ablumid}}&albumName={{ablumname}}" href="#">
+           <div class="hotsearch-name box-container-free flex-vertical"><span>{{ablumname}}</span></div>
+           <div class="hotsearch-detail">
+              <div class="detail-album-number"><i></i><span>{{storycount}}</span>集</div>
+              <div class="detail-often detail-album-often"><i></i><span>{{../../../albumTime}}</span></div>
+           </div>
+        </a>
+          <!-- <span  data-href="{{../HOST}}/page/appDownload.html" href="#" class="app-download-link external box-container-sub hotsearch-tip  flex-container-vertical link ">
+                <i class="hotsearch-tip-icon"></i>
+          </span> -->
+          <a class="hotsearch-tip"  data-href="{{../../../HOST}}/page/albumPage.html?type=album&id={{ablumid}}&albumName={{ablumname}}" href="#">
+            <i class="hotsearch-go-icon"></i>
+          </a>
+    </div>
+  </li>
+    {{/with}}
+  {{/rif}}
+{{/storyList}}

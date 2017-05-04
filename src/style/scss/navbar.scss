@@ -1,0 +1,15 @@
+@import 'variables';
+.navbar{
+	background-color:$primary-color !important;
+	.navbar-inner{
+		font-weight: normal !important;
+		.left,.center,.right,a{
+			color:#fff !important;
+		    font-weight: normal !important;
+		}
+	}
+	
+}
+.navbar:after{
+	background-color:none !important; 
+}

@@ -1,0 +1,55 @@
+
+{{#hotSearchList}}
+ {{#each list}}
+<!-- <li storyId = "{{storyid}}" class="hotsearch-list-ev">
+	<div class ="J_goCurrentPlayer hotsearch-list-div">
+		<div class="hotsearch-icon">
+			<span class ="hotsearch-name-icon">
+				<img src="{{iconurl}}" alt="">
+			</span>
+		</div>
+		<div class="hotsearch-result">
+			<div class="hotsearch-name"><span>{{storyname}}</span></div>
+			<div class="hotsearch-detail">
+              <div class="detail-number"><i></i><span>{{playcount}}</span></div>
+              <div class="detail-often"><i></i><span>{{timetext}}</span></div>
+           </div>
+        </div>
+	</div>
+	<!-- <a  href="#"  class="external box-container-sub hotsearch-tip app-download-link flex-container-vertical link">
+		<i class="hotsearch-tip-icon"></i>
+	</a> -->
+<!-- 	 <a  href="#"  class="external box-container-sub hotsearch-tip app-download-link flex-container-vertical link">
+        <i class="hotsearch-load-icon"></i>
+      </a>
+</li>
+ --> 
+
+
+<li storyId = "{{storyid}}" class="hotsearch-list-ev  box-container">
+    <div class ="J_goCurrentPlayer box-container-free hotsearch-list-ev-center box-container">
+
+        <div class="hotsearch-icon box-container-sub" >
+          <span class ="hotsearch-name-icon">
+            <img src="{{iconurl}}" alt="">
+          </span>
+        </div>
+        <div  class="box-container-free centertxt" >
+           <div class="hotsearch-name box-container-free flex-vertical"><span>{{storyname}}</span></div>
+           <div class="hotsearch-detail">
+              <div class="detail-number"><i></i><span>{{playcount}}</span></div>
+              <div class="detail-often"><i></i><span>{{timetext}}</span></div>
+           </div>
+        </div>
+          <!-- <span  data-href="{{../HOST}}/page/appDownload.html" href="#" class="app-download-link external box-container-sub hotsearch-tip  flex-container-vertical link ">
+                <i class="hotsearch-tip-icon"></i>
+          </span>-->
+          <span  data-href="{{../HOST}}/page/appDownload.html" href="#"  class="app-download-link external  box-container-sub hotsearch-tip flex-container-vertical link ">
+            <i class="hotsearch-load-icon"></i>
+          </span>
+    </div>
+  </li>
+
+{{/each}}
+{{/hotSearchList}}
+

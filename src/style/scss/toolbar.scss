@@ -1,0 +1,44 @@
+@import 'variables';
+.toolbar{
+	 i{
+	    &.icon {
+	      width:24px;	
+	      font-size: 28px;
+	      line-height: 28px;
+	    }
+	  }
+	.listen-icon{
+		position: relative;
+    	left: 5px;top:2px;
+		background:url(../img/listen_1x.png?__sprite);
+
+	}
+	.task-icon{
+		background:url(../img/task_1x.png?__sprite);
+	}
+	
+	.my-icon{
+		position: relative;
+    	left: 2px;top:2px;
+		background:url(../img/my_1x.png?__sprite);
+		//background-position: 2px 0px;
+	}
+	
+	.active{
+		color:$primary-color !important;
+		.listen-icon{
+			position: relative;
+	    	left: 5px;
+			background:url(../img/listen_on_1x.png?__sprite);
+		}
+		.task-icon{
+			background:url(../img/task_on_1x.png?__sprite);
+		}
+		.my-icon{
+			position: relative;
+	    	left: 0px;
+			background:url(../img/my_on_1x.png?__sprite);
+			background-position: 3px 0px;
+		}
+	}
+}

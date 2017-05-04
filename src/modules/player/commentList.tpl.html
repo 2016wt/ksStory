@@ -1,0 +1,49 @@
+<div class="player-comment-detai">
+    <div class="box-container player-boss-desc">
+        <div class="box-container-sub player-boss-headImg"> 
+            <img src="{{bossHeadImg}}" alt="" width="35" height="35">
+        </div>
+        <div class="box-container-sub box-container-free player-boss-text">
+            {{bossTalk}}
+        </div>
+        <div class="box-container-sub player-boss-blank"></div>
+    </div>
+    <div class="list-block">
+    <ul>
+     {{#commentList}}
+        {{#rif type "==" "1"}}
+        <li data-commentId="{{storycommentid}}">
+          <div class="item-content">
+            <div class="item-media">
+              <img src="{{headimgurl}}" alt="" width="100%" height="100%">
+            </div>
+            <div class="item-inner">
+              <div class="item-content comment-content">
+                   {{comment}}   
+              </div>
+              <div class="item-after">
+                  <span data-commentId={{storycommentid}}><i class="J_commentPraise player-praise-icon"></i></span>
+                  <span>{{praisecount}}</span> 
+              </div>
+            </div>
+          </div>
+        </li> 
+      {{else}}
+        <li data-commentId="{{storycommentid}}">
+          <div class="item-content">
+            <div class="item-media">
+              <img src="{{headimgurl}}" alt="" width="100%" height="100%">
+            </div>
+            <div class="item-inner">
+              <div class="item-content comment-content">
+                  <p class="J_commentVoice comment-voice">
+                   <audio src="{{comment}}"></audio>
+                  </p>
+            </div>
+          </div>
+        </li> 
+      {{/rif}}
+      {{/commentList}}
+    </ul>
+</div>
+</div>

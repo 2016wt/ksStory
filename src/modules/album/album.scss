@@ -1,0 +1,2097 @@
+@import "../../style/scss/mixins";
+.albumsBox{
+	padding-bottom: 44px!important;
+	.album-head{
+			width:100%;
+			height:38px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10;
+			background:#f1f1f1;
+			border-bottom:1px solid $border-color;
+			.album-head-ck{
+				width:10%;
+				height:38px;
+				float:left;
+				.item-ck{
+					@extend .icon;
+					background:url(../../style/img/album_ck_1x.png?__sprite);;
+				}
+			}
+			.item-ck-on{
+					background:url(../../style/img/album_ck_on_1x.png?__sprite);;
+			}
+			.album-heand-text{
+				font-size:$album-heand-text;
+				line-height:38px;
+			}
+	}
+	.album{
+		width:100%;
+		height:100%;
+		position: relative;
+		overflow: hidden;
+		box-sizing:border-box;
+		padding-bottom: 60px;
+		.album-topbar{
+			height: 44px;
+		}
+		.album-tag-panel-bg{
+			display:none;
+		}
+		.modal-overlay-visible{
+			top:40px;
+		}
+		.album-tag-panel{
+			width:100%;
+			height:0;
+			z-index: 999;
+			position: absolute;
+		    background: rgba(0, 0, 0, 0);
+		    transition: height background 250ms;
+		 	-webkit-transition: height background 250ms;
+			//display:none;
+		}
+
+		.album-tag-panel-on{
+			height:100%;
+		    background: rgba(0, 0, 0, 0.4);
+			//display:block;
+		}
+		.album-tag-content{
+			width:100%;
+			height:0px;
+			position:absolute;
+			z-index: 999;
+			background:#fff;
+			transition: height 250ms;
+		 	-webkit-transition: height 250ms;
+		 	.tag-wrap{
+		 		width:100%;
+		 		box-sizing:border-box;
+		 		height:auto;
+		 		//text-align:center;
+		 		padding: 0 10px;
+		 		display:none;
+		 		.tag-item{
+					min-width:10%;
+					height:0;
+					padding-left:10px;
+					padding-right:10px;
+					float:left;
+					margin-left: 15px;
+					margin-top:15px;
+					font-size: 1.2rem;
+					color:$text-color;
+					border:1px solid $border-color;
+					@include border-radius(30px);
+		 		}
+		 		.hotmain-record{
+					width: 100%;
+					height: 35px;
+					text-indent: 2.5px;
+					line-height: 35px;
+					color: #989898;
+					font-size: $home-search-record;
+				}
+				.hotmain-record-con{
+					width: 100%;
+					min-height: 38px;
+					height: auto!important;
+					height: 38px;
+					.hotmain-record-con-a{
+						display: inline-block;
+						height: 26px;
+						border-radius: 13px;
+						line-height: 26px;
+						color: #5c5c5c;
+						font-size: $home-search-tag;
+						padding: 0 16px;
+						text-align: center;
+						border: 1px solid $border-color;
+						margin: 0 11px 10.5px 0;
+					}
+					.changered{
+						color:red;
+			 		}
+					.hotmain-record-con-a:active{
+						background-color: #ddd;
+						color:#fff;
+					}
+				}
+		 	}
+		}
+		.album-tag-content-on{
+			min-height: 30%;
+			height: auto!important;
+			padding-bottom: 10px;
+			max-height: 60%;
+			overflow-y:scroll;
+			.tag-wrap{
+				height:100%;
+				display:block;
+				.tag-item{
+					height: 25px;
+					line-height: 25px;
+				}
+			}
+		}
+		.album-tag-bg{
+			width:100%;
+			// height:70%;
+			// position:absolute;
+			// bottom:0;
+		}
+		
+		.album-main{
+			width:100%;
+			height:100%;
+			overflow-y:scroll;
+			background:#fff;
+		}
+		.album-item-wrap{
+			width:100%;
+			height:80px;
+			overflow:hidden;
+			border-bottom:1px solid $border-color;
+			.album-item-content{
+				width:100%;
+				height:80px;
+				box-sizing:border-box;
+				padding: 0 8px 0 20px;
+				@include flex-box;
+				@include flex-box-align;
+				@include flex-box-horizontal;
+				.item-content-left{
+					width:60px;
+					height: 100%;
+					background:#fff;
+					position:relative;
+					.albumItem-img{
+						width: 60px;
+						height: 60px;
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						z-index: 1;
+						overflow: hidden;
+						transform:translate(-50%,-50%);
+					}
+					.item-ck{
+						position:absolute;
+						right:2px;
+						bottom:11px;
+						z-index: 2;
+						@extend .icon;
+						background:url(../../style/img/album_ck_1x.png?__sprite) center center no-repeat					}
+					.item-ck-on{
+						background:url(../../style/img/album_ck_on_1x.png?__sprite)center center no-repeat;
+
+					}
+				}
+				.item-content-center{
+					@include flex-item;
+					@include flex-box;
+					@include flex-box-vertical;
+					@include flex-box-align;
+					padding-left:12px;
+					height: 100%;
+					overflow: hidden;
+					.album-content-title{
+						width: 100%;
+						@include flex-item;
+						font-size:14px;
+						overflow: hidden;
+						@include flex-box;
+						@include flex-box-bottom;
+						span{
+							width: 80%;
+							overflow: hidden;
+						    text-overflow: ellipsis;
+						    white-space: nowrap;
+						}
+					}
+					.album-content-labels{
+						@include flex-item;
+						width: 100%;
+						background:#fff;
+						padding-top:5px;
+						@include flex-box;
+						@include flex-box-align;
+						@include flex-box-left;
+						@include flex-box-horizontal;
+						.label-item{
+							width:auto;
+							height:23px;
+							line-height: 23px;
+							display:inline-block;
+							border:1px solid $border-color;
+							@include border-radius(20px);
+						    padding-left: 8px;
+						    padding-right: 8px;
+						    margin-right: 10px;
+						}
+						.detail-number{
+									//@include flex-item;
+									@include flex-box;
+									width: 72px;
+									color: #888;
+									height:14px;
+									@include flex-box-align;
+									font-size: 12px;
+									i{
+										width: 12px;
+										height:12px;
+										display: inline-block;
+										background: url(../../style/img/player_count_1x.png?__sprite);
+										background-position:  right top;
+									}
+									span{
+										display:inline-block;
+										@include flex-box;
+										@include flex-box-align;
+										margin-left: 4px;
+										line-height:12px;
+										color: #888;
+									}
+								}
+						.detail-often{
+							@include flex-item;
+							@include flex-box;
+							height:14px;
+							@include flex-box-align;
+							@include flex-box-horizontal;
+							color: #888;
+							font-size: 12px;
+							i{
+								width: 12px;
+								height:12px;
+								display: inline-block;
+								background: url(../../style/img/wake.png?__sprite) ;
+								background-position:  right top;
+							}
+							span{
+								display:inline-block;
+								@include flex-box;
+								line-height:12px;
+								@include flex-box-align;
+								margin-left: 6px;
+							}
+						}
+					}
+				}
+				.item-content-right{
+					width:20%;
+					height: 100%;
+					position:relative;
+					.album-item-time{
+						width:100%;
+						height:30px;
+						line-height: 30px;
+						text-align:right;
+						position:absolute;
+						right:12px;
+					}
+					.album-theme-playerNumber{
+						//width:100%;
+					    position: absolute;
+					    bottom: 0px;
+					    right:12px;
+						i{
+							@extend .icon;
+						}
+						.play-count-icon{
+							position: relative;
+			    			top: 5px;
+							background:url(../../style/img/play_count_1x.png?__sprite);
+						}
+						.play-count-text{
+							position: relative;
+			    			top: -6px;
+			    			color:#333;
+						}
+					}
+				}
+			}
+		}
+		.album-item-ck{
+			width:10%;
+			height:65px;
+			float:left;
+			.item-ck{
+				@extend .icon;
+				background:url(../../style/img/album_ck_1x.png?__sprite);
+			}
+		}
+	}
+	.album-action{
+		width:100%;
+		height:60px;
+		background:#ccc;
+		position:fixed;
+		z-index: 99;
+		bottom:0px;
+		.album-action-left{
+			width:15%;
+			padding-left:18px;
+			padding-top:5px;
+			position:relative;
+			.album-action-count{
+				width:18px;
+				height:18px;
+				line-height: 18px;
+				text-align:center;
+				color:#fff;
+				background:$button-save-color;
+				@include border-radius(50px);
+				display:inline-block;
+				position:absolute;
+				top:3px;
+				right:-2px;
+			}
+		}
+		.album-action-center{
+			height:60px;
+			line-height:60px;
+			color:#333;
+			text-align: center;
+			.album-action-allTime{
+				font-size: $album-action;
+			}
+		}
+		.album-action-right{
+			width:30%;
+			height:60px;
+			line-height:60px;
+			background:$button-save-color;
+			color:#fff;
+			text-align: center;
+			font-size:$album-action;
+			letter-spacing: 3px;
+		}
+	}
+	.load-over{
+		width:100%;
+		height:30px;
+		line-height:30px;
+		font-size:$album-action;
+	}
+
+}
+
+/*---公共nav模块-----------------------------------*/
+.albumNav{
+	height: 44px;
+	width: 100%;
+	background: #fff;
+	font-size: $albumNav;
+	color:#000;
+	position: relative;
+	.albumNav-inner{
+		height: 44px;
+		width: 100%;
+		.albumNav-left{
+				width: 40px;
+				height: 44px;
+				
+				@include flex-box;
+				@include flex-box-align;
+				@include flex-box-justify;
+				.back{
+					width: 40px;
+					height: 44px;
+					display:inline-block;
+					@include flex-box;
+					@include flex-box-justify;
+					@include flex-box-align;
+				}
+		}
+		.albumNav-left:active{
+			opacity: 0.5;
+		}
+		.albumNav-center{
+			// text-align: center;
+			// line-height: 44px;
+			display:-webkit-box;
+			color: #000;
+			-webkit-box-align:center;
+			-webkit-box-pack:center;
+			span{
+				max-width: 154px;
+				text-overflow: ellipsis;
+				white-space:nowrap;
+				overflow: hidden;
+				display: block;
+			}
+			.newAlbums-editor{
+				width: 18px;
+				height: 18px;
+				display: inline-block;
+				margin: 0 auto;
+				vertical-align: middle;
+				margin-left: 4px;
+				background:  url(../../style/img/edit_1x.png?__sprite)no-repeat center center;
+				background-size: 16px 16px;
+			}
+			.newAlbums-symbol{
+				width: 18px;
+				height: 10px;
+				display: inline-block;
+				margin: 0 auto;
+				vertical-align: middle;
+				margin-left: 4px;
+				background:  url(../../style/img/downPull_1x.png?__sprite) no-repeat center center;
+				background-size: 18px 10px;
+			}
+			.newAlbums-symbol-on{
+				background:  url(../../style/img/onPull_1x.png?__sprite) no-repeat center center;
+				background-size: 18px 10px;
+			}
+			.newAlbums-editor:active{
+				opacity: 0.5;
+			}
+		}
+		.albumNav-right{
+			width: 40px;
+			height: 44px;
+			-moz-box-sizing: border-box;
+		    -o-box-sizing: border-box;
+		    -webkit-box-sizing: border-box;
+		    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+		    padding-right: 10px;
+		    @include flex-box;
+		    @include flex-box-align;
+			.albumNav-right-a{
+				color:#fff;
+				height: 19px;
+				font-size: $albumNav-right-a;
+			}
+		}
+		.editNewAlbumsName-right{
+			font-size: $editNewAlbumsName-right;
+		}
+		.editNewAlbumsName-right:active{
+			opacity: 0.5;
+		}
+	}
+}
+.albumNav:after{
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: auto;
+		top: auto;
+		height: 1px;
+		width: 100%;
+		background-color: $border-color;
+		display: block;
+		z-index: 15;
+		-webkit-transform-origin:50% 100%;
+		transform-origin:50% 100%;
+		transform:scaleY(0.5);
+}
+
+
+
+/*---新建专辑模块 albums-----------------------------------*/
+.newAlbumsBox{
+	padding-bottom: 44px!important;
+	.newAlbums{
+		width: 100%;
+		position: relative;
+		//height: 100%;
+		overflow-y:scroll;
+		margin-bottom: 61px; 
+		.newAlbums-topbar{
+			height: 44px;
+		}
+		.newAlbums-maincontent{
+			.album-tag-panel{
+				width:100%;
+				height:0;
+				z-index: 0;
+				position: absolute;
+			    background: rgba(0, 0, 0, 0);
+			    transition: height background 250ms;
+			 	-webkit-transition: height background 250ms;
+				//display:none;
+			}
+			.list-block{
+					margin: 0;
+				}
+				.newAlbums-list-li{
+					height: 50px;
+					border-bottom: 1px solid #e5e5e5;
+					.newAlbums-list-left{
+						left:5px;
+						background-size: 16px 9px;
+						height: 100%;
+						border: 0!important;
+					}
+					.newAlbums-content{
+						padding-left: 17.5px;
+						height: 100%;
+						.newAlbums-list-center{
+							width: 0;
+						}
+						.newAlbums-list-right{
+							margin-left:30px!important;
+							padding-right: 17.5px;
+							.newAlbums-listRight-text{
+								width: 134px;
+								text-overflow: ellipsis;
+								white-space:nowrap;
+								overflow: hidden;
+								font-size:$newAlbums-listRight-text;
+							}
+							.newAlbums-listRight-icon{
+								margin-left: 0;
+								width: 76px;
+								span{
+									display: inline-block;
+									width: 26px;
+									height: 26px;
+									margin-right: 3px;
+									transform:scale(0.75);
+								}
+								i{
+									display: inline-block;
+									font-size: $newAlbums-listRight-icon;
+									width: 12px;
+									line-height: 26px;
+									text-align: center;
+								}
+								em{
+									display: inline-block;
+									width: 26px;
+									height: 26px;
+									margin-left: 3px;
+									transform:scale(0.75);
+								}
+								.newAlbums-reduce{
+									background:url('../style/img/newalbums_reduce_1x.png');
+									background-size: 100% 100%;
+								}
+								.newAlbums-reduce:active{
+									opacity: 0.5;
+								}
+								.newAlbums-add{
+									background:url('../style/img/newalbums_add_1x.png');
+									background-size: 100% 100%;
+								}
+								.newAlbums-add:active{
+									opacity: 0.5;
+								}
+							}
+						}
+						.newAlbums-list-right::after{
+							height: 0;
+						}
+					}
+				}
+		}
+		.newAlbums-action{
+			width:100%;
+			height:60px;
+			background:#ccc;
+			position:fixed;
+			bottom:0px;
+			// .newAlbums-action-left{
+			// 	width: 60px;
+			// 	height: 100%;
+			// 	position: relative;
+			// 	text-align: center;
+			// 	.newAlbum-allCount-icon{
+			// 		width: 36px;
+			// 		height: 36px;
+			// 		display: inline-block;
+			// 		margin-top: 10px;
+			// 		margin-left: 27.5px;
+			// 		background: url(../../style/img/album_group_1x.png?__sprite);
+			// 	}
+			// 	.newAlbums-action-allCount{
+			// 		position: absolute;
+			// 		width: 1.2rem;
+			// 		height: 1.2rem;
+			// 		right: -9px;
+			// 		top: 6px;
+			// 		border-radius: 50%;
+			// 		background: #fd614b;
+			// 		text-align: center;
+			// 		line-height: 1.2rem;
+			// 		color: #fff;
+			// 		font-size: 0.7rem;
+			// 	}
+			// }
+			.newAlbums-action-center{
+				.newAlbums-action-allCount{
+					// position: absolute;
+					width: 1.2rem;
+					height: 1.2rem;
+					right: -9px;
+					top: 6px;
+					border-radius: 50%;
+					//background: #fd614b;
+					text-align: center;
+					line-height: 1.2rem;
+					//color: #fff;
+					font-size:$newAlbums-action-allCount;
+				}
+				height:60px;
+				line-height:60px;
+				color:#333;
+				text-align: center;
+				.newAlbums-action-allTime{
+					font-size: $newAlbums-action-allTime;
+				}
+			}
+			.newAlbums-action-right{
+				width:30%;
+				height:60px;
+				line-height:60px;
+				background:$button-save-color;
+				color:#fff;
+				text-align: center;
+				font-size:$newAlbums-action-allTime;
+				letter-spacing: 3px;
+			}
+		}
+	}
+}
+
+/*---新建专辑名称编辑模块-----------------------------------*/
+.editNewAlbumsName{
+	.newAlbums-topbar{
+		height: 44px;
+	}
+	.editNewAlbumsName-input{
+		width: 100%;
+		height: 41px;
+		margin-top: 19px;
+		border: 0;
+		border-top: 1px solid #d3d3d3;
+		border-bottom: 1px solid #d3d3d3;
+		text-indent: 18px;
+		padding: 0;
+
+	}
+
+}
+
+/*---新建专辑弹层模块1 -----------------------------------*/
+.album-float-one{
+	display: block;
+	width: 167px;
+	height: 47.5px;
+	background: #000;
+	opacity: 0.2;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform:translate(-50%,-50%);
+	border-radius: 5px;
+	color:#fff;
+	text-align: center;
+	line-height: 47.5px;
+	.album-float-top{
+		height: 50%;
+		width: 100%;
+		line-height: 50%;
+		.album-float-topcon{
+			font-size: $album-float-topcon;
+			span{
+				width: 13px;
+				height: 13px;
+				display: inline-block;
+				margin-right: 12px;
+				vertical-align: middle;
+			}
+			.float-topcon-icon{
+				background: url('../style/img/login_unselected_1x.png');
+				background-size:100% 100%;
+
+			}
+		}
+	}
+	.album-float-bottom{
+		height: 50%;
+		width: 100%;
+	}
+}
+
+
+
+/*-----专辑单页  陈  修改版--------------------------------------*/
+.albumOnlyPage{
+	display: -webkit-box;
+	-webkit-box-orient:vertical;
+	.albumNav{
+		height: 44px;
+		width: 100%;
+		background: #fff;
+		font-size: $albumNav;
+		color:#000;
+		.albumNav-inner{
+			height: 44px;
+			width: 100%;
+			display: -webkit-box;
+			-webkit-box-align:center;
+			.albumNav-left{
+					width: 40px;
+					height: 44px;
+					@include flex-box;
+					@include flex-box-align;
+					@include flex-box-justify;
+					.back{
+						width: 40px;
+						height: 44px;
+						display:inline-block;
+						@include flex-box;
+						@include flex-box-justify;
+						@include flex-box-align;
+					}
+			}
+			.albumNav-left:active{
+				opacity: 0.5;
+			}
+			.albumNav-center{
+				// text-align: center;
+				 //line-height: 44px;
+				display:-webkit-box;
+				color:#000;
+				-webkit-box-align:center;
+				-webkit-box-pack:center;
+				span{
+					max-width: 154px;
+					text-overflow: ellipsis;
+					white-space:nowrap;
+					overflow: hidden;
+					display: block;
+				}
+				.newAlbums-editor{
+					width: 18px;
+					height: 18px;
+					display: inline-block;
+					margin: 0 auto;
+					vertical-align: middle;
+					margin-left: 4px;
+					background:  url(../../style/img/edit_1x.png?__sprite);
+				}
+				.newAlbums-editor:active{
+					opacity: 0.5;
+				}
+			}
+			.albumNav-right{
+				width: 40px;
+				height: 44px;
+				-moz-box-sizing: border-box;
+			    -o-box-sizing: border-box;
+			    -webkit-box-sizing: border-box;
+			    -ms-box-sizing: border-box;
+			    box-sizing: border-box;
+			    padding-right: 10px;
+				@include flex-box;
+		   		@include flex-box-align;
+				.albumNav-right-a{
+					height: 19px;
+					color:#fff;
+					font-size: $albumNav-right-a;
+					display: -webkit-box;
+					display: -moz-box;
+					-webkit-box-align:center;
+					-moz-box-align:center;
+				}
+			}
+			.editNewAlbumsName-right{
+				font-size: $editNewAlbumsName-right;
+			}
+			.editNewAlbumsName-right:active{
+				opacity: 0.5;
+			}
+		}
+	}
+	.albumOnlyPageBox{
+		padding: !important;
+		.allplay{
+				width: 100%;
+				height:40px;
+				background:#f2f2f2;
+				text-align:center;
+				line-height:40px;
+				display: -moz-box;
+				display: -webkit-box;
+				-moz-box-align:center;
+				-webkit-box-align:center;
+				-moz-box-pack:center;
+				-webkit-box-pack:center;
+				span{
+					display: inline-block;
+				}
+				.playbtn{
+					width: 15px;
+					height: 15px;
+					display:inline-block;
+					background:url(../../style/img/add_albums_1x.png?__sprite);
+					margin-right:9px;
+				}
+				.downbtn{
+						width:15px;
+						height:15px;
+						display:inline-block;
+						background:url(../../style/img/down_1x.png?__sprite);
+						margin-right:9px;
+				}
+		}
+		.contentTop{
+			width: 100%;
+			height:40px;
+			background:#ECECEC;
+			@include flex-box;
+			@include flex-box-horizontal;
+			.left{
+				//@include flex-item-scalemax;
+				flex:1;
+				div{
+					width: 100%;
+					height: 100%;
+					box-sizing:border-box;
+					padding-left: 20px;
+					@include flex-box;
+					@include flex-box-left;
+					@include flex-box-align;
+				}
+			}
+			.right{
+				//@include flex-item-scalemax;
+				flex:1;
+				div{
+					width: 100%;
+					height: 100%;
+					box-sizing:border-box;
+					padding-right: 20px;
+					@include flex-box;
+					@include flex-box-right;
+					@include flex-box-align;
+					@include flex-box-horizontal;
+					.playbtn{
+						width: 15px;
+						height: 15px;
+						display:inline-block;
+						background:url(../../style/img/add_albums_1x.png?__sprite);
+						margin-right:9px;
+					}
+					.downbtn{
+							width:15px;
+							height:15px;
+							display:inline-block;
+							background:url(../../style/img/down_1x.png?__sprite);
+							margin-right:9px;
+					}
+				}
+			}
+		}
+		.list-block{
+			margin:0;
+			/*---专辑单页   陈  修改-----------------------------------*/
+			.albumOnlyPagelist{
+				&:before{
+					height: 0;
+				}
+				width: 100%;
+				height: auto;
+				position: relative;
+				.default-style{
+					width:100%;
+					height:100vh;
+					display:block;
+					background:#f1f1f1;
+					position:relative;
+					img{
+						position:absolute;
+						left:50%;
+						top:5%;
+						transform:translate(-50%,-5%);
+					}
+					p{
+						text-align:center;
+						font-size:1.2rem;
+						position:absolute;
+						left:50%;
+						top:10%;
+						transform:translate(-50%,-10%);
+					}
+				}
+				.hotsearch-list-ev{
+					width: 100%;
+					@include  flex-box;
+					-moz-box-sizing: border-box; // FireFox3.5+
+				    -o-box-sizing: border-box; // Opera9.6(Presto内核)
+				    -webkit-box-sizing: border-box; // Safari3.2+
+				    -ms-box-sizing: border-box; // IE8
+				    box-sizing: border-box;
+					height: 80px;
+					padding-right: 8px;
+					background: #fff;
+					overflow: hidden;
+					position: relative;
+					&:after{
+						content: '';
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						right: auto;
+						top: auto;
+						height: 1px;
+						width: 100%;
+						background-color: $border-color;
+						display: block;
+						z-index: 15;
+						-webkit-transform-origin:50% 100%;
+						transform-origin:50% 100%;
+						transform:scaleY(0.5);
+					}
+					.hotsearch-list-ev-center{
+						@include  flex-box;
+						@include  flex-box-horizontal;
+						@include  flex-item;
+						overflow: hidden;
+						height: 100%;
+						.hotsearch-icon{
+							width: 80px;
+							height: 80px;
+							box-sizing:border-box;
+							display: block;
+							position: relative;
+							span{
+								width: 60px;
+								height: 60px;
+								position: absolute;
+								left: 50%;
+								top:50%;
+								transform:translate(-40%,-50%);
+								display: inline-block;
+								vertical-align: middle;
+								img{
+									width: 100%;
+									box-shadow: 0px 0px 1px 1px #ccc;
+									height: 60px;
+								}
+							}
+							.hotsearch-albumTag{
+								position: absolute;
+								width: 28px;
+								height: 13px;
+								line-height: 13px;
+								background: #82CE6A;
+								color: #fff;
+								font-size: 9px;
+								top:10px;
+								left: 16px;
+								text-align: center;
+							}
+							.hotsearch-name-icon-two{
+									i{
+										width: 35px;
+										height: 35px;
+										border-radius: 50%;
+										vertical-align: middle;
+										display: inline-block;
+										background:url(../../style/img/loadpic@2x.png) no-repeat center center;
+										background-size: 100% auto;
+										border: 1px solid #ccc;
+									}
+							}
+							&:after{
+								position: absolute;
+								content: '';
+								position: absolute;
+								left: 0;
+								bottom: 0;
+								right: auto;
+								top: auto;
+								height: 4px;
+								width: 100%;
+								background-color: #fff;
+								display: block;
+								z-index: 16;
+								-webkit-transform-origin:50% 100%;
+								transform-origin:50% 100%;
+								transform:scaleY(0.5);
+							}
+						}
+						.centertxt{
+							display:block;
+							@include  flex-box;
+							@include  flex-item;
+							box-sizing:border-box;
+							padding-left: 15px;
+							@include  flex-box-vertical;
+							@include  flex-box-bottom;
+							overflow: hidden;
+							.hotsearch-name{
+								@include  flex-item;
+								@include  flex-box;
+								@include flex-box-horizontal;
+								@include  flex-box-bottom;
+								overflow: hidden;
+								width:100%;
+								font-size: $album-action;
+								span{
+									display: block;
+									width:100%;
+									overflow: hidden;
+									white-space: nowrap;
+									text-overflow: ellipsis;
+								}
+								.defaultstyle{
+									@include  flex-item;
+									width:40%;
+									div{
+										width:100%;
+										height:12px;
+										background: #e0e0e0;
+										margin-left: 10px;
+									}
+								}
+							}
+							.hotsearch-detail{
+								@include flex-box;
+								@include flex-box-horizontal;
+								@include  flex-box-align;
+								@include flex-item;
+								width:100%;
+								padding-left: 15px;
+								//margin-top: 10px;
+								.detail-number{
+									//@include flex-item;
+									@include flex-box;
+									width: 72px;
+									color: #888;
+									height:14px;
+									@include flex-box-align;
+									font-size: 12px;
+									i{
+										width: 12px;
+										height:12px;
+										display: inline-block;
+										background: url(../../style/img/player_count_1x.png?__sprite) ;
+										background-position:  right top;
+									}
+									span{
+										display:inline-block;
+										@include flex-box;
+										@include flex-box-align;
+										margin-left: 4px;
+										line-height:12px;
+										color: #888;
+									}
+								}
+								.detail-often{
+									@include flex-item;
+									@include flex-box;
+									height:14px;
+									@include flex-box-align;
+									@include flex-box-horizontal;
+									color: #888;
+									font-size: 12px;
+									i{
+										width: 12px;
+										height:12px;
+										display: inline-block;
+										background: url(../../style/img/wake.png?__sprite);
+										background-position:  right top;
+									}
+									span{
+										display:inline-block;
+										@include flex-box;
+										line-height:12px;
+										@include flex-box-align;
+										margin-left: 6px;
+									}
+								}
+								.detail-album-number{
+									width: 72px;
+									color: #888;
+									height:14px;
+									@include flex-box;
+									@include flex-box-align;
+									@include flex-box-horizontal;
+									font-size: 12px;
+									i{
+										width: 12px;
+										height:12px;
+										display: inline-block;
+										background: url(../../style/img/albumpage_count_1x.png?__sprite);
+										background-position:  right top;
+									}
+									span{
+										display:inline-block;
+										@include flex-box;
+										line-height:12px;
+										@include flex-box-align;
+										margin-left: 4px;
+										color: #888;
+									}
+								}
+							}
+						}
+						.hotsearch-tip{
+							width: 40px;
+							height: 80px;
+							position: relative;
+							.hotsearch-tip-icon{
+								width: 20px;
+								height: 20px;
+								background:url(../../style/img/add_albums_1x.png?__sprite) no-repeat  center center;
+								background-size: 20px 20px;
+								position: absolute;
+								z-index: 999;
+								top:50%;left: 50%;
+								@include transform-translate(-50%,-50%);
+							}
+							.hotsearch-load-icon{
+								width: 15px;
+								height: 15px;
+								display: inline-block;
+								background:url(../../style/img/down_1x.png?__sprite) no-repeat center center;
+								@include transform-translate(-50%,-50%);
+								position: absolute;
+								z-index: 999;
+								top:50%;left: 50%;
+							}
+							.hotsearch-go-icon{
+								width: 9px;
+								height: 15px;
+								position: absolute;
+								z-index: 999;
+								@include transform-translate(-50%,-50%);
+								display: inline-block;
+								top:50%;left: 50%;
+								background:url(../../style/img/go_in_1x.png?__sprite);
+								background-position:  right top;
+							}
+						}
+						.hotsearch-tip:active{
+							opacity: 0.5;
+						}
+					}
+
+					.hotsearch-add{
+						width: 7.2%;
+						height: 50px;
+						.hotsearch-add-icon{
+							width: 18px;
+							height: 18px;
+							background: url(../../style/img/add_albums_1x.png);
+							background-size: 100% 100%;
+						}
+					}
+					.hotsearch-play{
+						width: 12.5%;
+						height: 50px;
+						.hotsearch-play-icon{
+							width: 18px;
+							height: 18px;
+							background: url(../../style/img/search_listen_1x.png);
+							background-size: 100% 100%;
+						}
+					}
+				}
+				.hotsearch-list-ev:active{
+					background: #e6e4e5;
+				}
+			}
+		}
+	}
+	.albumOnlyPageBox::-webkit-scrollbar{
+	  width:0;
+	  height:0;
+	}
+}
+
+/*-----专辑albumPage单页  陈  --------------------------------------*/
+.albumPage{
+	display: -webkit-box;
+	-webkit-box-orient:vertical;
+	.albumNav{
+		height: 44px;
+		width: 100%;
+		background: #fff;
+		font-size: $albumNav;
+		color:#fff;
+		.albumNav-inner{
+			height: 44px;
+			width: 100%;
+			display: -webkit-box;
+			-webkit-box-align:center;
+			.albumNav-left{
+				width: 40px;
+				height: 44px;
+				@include flex-box;
+				@include flex-box-align;
+				@include flex-box-justify;
+				.back{
+					width: 40px;
+					height: 44px;
+					display:inline-block;
+					@include flex-box;
+					@include flex-box-justify;
+					@include flex-box-align;
+				}
+			}
+			.albumNav-left:active{
+				opacity: 0.5;
+			}
+			.albumNav-center{
+				// text-align: center;
+				 //line-height: 44px;
+				display:-webkit-box;
+				color: #000;
+				-webkit-box-align:center;
+				-webkit-box-pack:center;
+				span{
+					max-width: 154px;
+					text-overflow: ellipsis;
+					white-space:nowrap;
+					overflow: hidden;
+					display: block;
+				}
+				.newAlbums-editor{
+					width: 18px;
+					height: 18px;
+					display: inline-block;
+					margin: 0 auto;
+					vertical-align: middle;
+					margin-left: 4px;
+					background:  url(../../style/img/edit_1x.png?__sprite);
+				}
+				.newAlbums-editor:active{
+					opacity: 0.5;
+				}
+			}
+			.albumNav-right{
+				width: 40px;
+				height: 44px;
+				-moz-box-sizing: border-box;
+			    -o-box-sizing: border-box;
+			    -webkit-box-sizing: border-box;
+			    -ms-box-sizing: border-box;
+			    box-sizing: border-box;
+			    padding-right: 10px;
+			    @include flex-box;
+		   		@include flex-box-align;
+				.albumNav-right-a{
+					color:#fff;
+					font-size: $albumNav-right-a;
+					display: -webkit-box;
+					display: -moz-box;
+					height: 19px;
+					-webkit-box-align:center;
+					-moz-box-align:center;
+				}
+			}
+			.editNewAlbumsName-right{
+				font-size: $editNewAlbumsName-right;
+			}
+			.editNewAlbumsName-right:active{
+				opacity: 0.5;
+			}
+		}
+	}
+	.albumPageBox{
+		padding: !important;
+		.allplay{
+				width: 100%;
+				height:40px;
+				background:#f2f2f2;
+				text-align:center;
+				line-height:40px;
+				display: -moz-box;
+				display: -webkit-box;
+				-moz-box-align:center;
+				-webkit-box-align:center;
+				-moz-box-pack:center;
+				-webkit-box-pack:center;
+				span{
+					display: inline-block;
+				}
+				.playbtn{
+					width: 15px;
+					height: 15px;
+					display:inline-block;
+					background:url(../../style/img/add_albums_1x.png?__sprite);
+					margin-right:9px;
+				}
+				.downbtn{
+						width:15px;
+						height:15px;
+						display:inline-block;
+						background:url(../../style/img/down_1x.png?__sprite);
+						margin-right:9px;
+				}
+		}
+		.contentTop{
+			width: 100%;
+			height:40px;
+			background:#ECECEC;
+			@include flex-box;
+			@include flex-box-align;
+			@include flex-box-horizontal;
+			.left{
+				//@include flex-item-scalemax;
+				flex:1;
+				div{
+					width: 100%;
+					height: 100%;
+					box-sizing:border-box;
+					padding-left: 20px;
+					@include flex-box;
+					@include flex-box-left;
+					@include flex-box-align;
+				}
+			}
+			.right{
+				//@include flex-item-scalemax;
+				flex:1;
+				div{
+					width: 100%;
+					height: 100%;
+					box-sizing:border-box;
+					padding-right: 20px;
+					@include flex-box;
+					@include flex-box-right;
+					@include flex-box-align;
+					@include flex-box-horizontal;
+					.playbtn{
+					width: 15px;
+					height: 15px;
+					display:inline-block;
+					background:url(../../style/img/add_albums_1x.png?__sprite);
+					margin-right:9px;
+					}
+					.downbtn{
+							width:15px;
+							height:15px;
+							display:inline-block;
+							background:url(../../style/img/down_1x.png?__sprite);
+							margin-right:9px;
+					}
+				}
+			}
+		}
+		.list-block{
+			margin:0;
+			/*---专辑单页   陈  修改-----------------------------------*/
+			.albumOnlyPagelist{
+				&:before{
+					height: 0;
+				}
+				width: 100%;
+				height: auto;
+				position: relative;
+				.default-style{
+					width:100%;
+					height:100vh;
+					display:block;
+					background:#f1f1f1;
+					position:relative;
+					img{
+						//display:block;
+						position:absolute;
+						left:50%;
+						top:5%;
+						transform:translate(-50%,-5%);
+					}
+					p{
+						text-align:center;
+						font-size:1.2rem;
+						position:absolute;
+						left:50%;
+						top:10%;
+						transform:translate(-50%,-10%);
+					}
+				}
+				.hotsearch-list-ev{
+					width: 100%;
+					@include  flex-box;
+					-moz-box-sizing: border-box; // FireFox3.5+
+				    -o-box-sizing: border-box; // Opera9.6(Presto内核)
+				    -webkit-box-sizing: border-box; // Safari3.2+
+				    -ms-box-sizing: border-box; // IE8
+				    box-sizing: border-box;
+					height: 80px;
+					padding-right: 8px;
+					background: #fff;
+					overflow: hidden;
+					position: relative;
+					&:after{
+						content: '';
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						right: auto;
+						top: auto;
+						height: 1px;
+						width: 100%;
+						background-color: $border-color;
+						display: block;
+						z-index: 15;
+						-webkit-transform-origin:50% 100%;
+						transform-origin:50% 100%;
+						transform:scaleY(0.5);
+					}
+					.hotsearch-list-ev-center{
+						@include  flex-box;
+						@include  flex-box-horizontal;
+						@include  flex-item;
+						overflow: hidden;
+						height: 100%;
+						.hotsearch-icon{
+							width: 80px;
+							height: 80px;
+							box-sizing:border-box;
+							display: block;
+							position: relative;
+							span{
+								width: 60px;
+								height: 60px;
+								position: absolute;
+								left: 50%;
+								top:50%;
+								transform:translate(-40%,-50%);
+								display: inline-block;
+								vertical-align: middle;
+								img{
+									width: 100%;
+									box-shadow: 0px 0px 1px 1px #ccc;
+									height: 60px;
+								}
+							}
+							.hotsearch-albumTag{
+								position: absolute;
+								width: 28px;
+								height: 13px;
+								line-height: 13px;
+								background: #82CE6A;
+								color: #fff;
+								font-size: 9px;
+								top:0;
+								left: 0;
+								text-align: center;
+							}
+							.hotsearch-name-icon-two{
+									i{
+										width: 35px;
+										height: 35px;
+										border-radius: 50%;
+										vertical-align: middle;
+										display: inline-block;
+										background:url(../../style/img/loadpic@2x.png) no-repeat center center;
+										background-size: 100% auto;
+										border: 1px solid #ccc;
+									}
+							}
+							&:after{
+								position: absolute;
+								content: '';
+								position: absolute;
+								left: 0;
+								bottom: 0;
+								right: auto;
+								top: auto;
+								height: 4px;
+								width: 100%;
+								background-color: #fff;
+								display: block;
+								z-index: 16;
+								-webkit-transform-origin:50% 100%;
+								transform-origin:50% 100%;
+								transform:scaleY(0.5);
+							}
+						}
+						.centertxt{
+							display:block;
+							@include  flex-box;
+							@include  flex-item;
+							box-sizing:border-box;
+							padding-left: 15px;
+							@include  flex-box-vertical;
+							@include  flex-box-bottom;
+							overflow: hidden;
+							.hotsearch-name{
+								@include  flex-item;
+								@include  flex-box;
+								@include flex-box-horizontal;
+								@include  flex-box-bottom;
+								overflow: hidden;
+								width:100%;
+								font-size: $album-action;
+								span{
+									display: block;
+									width:100%;
+									overflow: hidden;
+									white-space: nowrap;
+									text-overflow: ellipsis;
+								}
+								.defaultstyle{
+									@include  flex-item;
+									width:40%;
+									div{
+										width:100%;
+										height:12px;
+										background: #e0e0e0;
+										margin-left: 10px;
+									}
+								}
+							}
+							.hotsearch-detail{
+								@include flex-box;
+								@include flex-box-horizontal;
+								@include  flex-box-align;
+								@include flex-item;
+								width:100%;
+								padding-left: 15px;
+								//margin-top: 10px;
+								.detail-number{
+									//@include flex-item;
+									@include flex-box;
+									width: 72px;
+									color: #888;
+									height:14px;
+									@include flex-box-align;
+									font-size: 12px;
+									i{
+										width: 12px;
+										height:12px;
+										display: inline-block;
+										background: url(../../style/img/player_count_1x.png?__sprite);
+										background-position:  right top;
+									}
+									span{
+										display:inline-block;
+										@include flex-box;
+										@include flex-box-align;
+										margin-left: 4px;
+										line-height:12px;
+										color: #888;
+									}
+								}
+								.detail-often{
+									@include flex-item;
+									@include flex-box;
+									height:14px;
+									@include flex-box-align;
+									@include flex-box-horizontal;
+									color: #888;
+									font-size: 12px;
+									i{
+										width: 12px;
+										height:12px;
+										display: inline-block;
+										background: url(../../style/img/wake.png?__sprite);
+										background-position:  right top;
+									}
+									span{
+										display:inline-block;
+										@include flex-box;
+										line-height:12px;
+										@include flex-box-align;
+										margin-left: 6px;
+									}
+								}
+								.detail-album-number{
+									width: 72px;
+									color: #888;
+									height:14px;
+									@include flex-box;
+									@include flex-box-align;
+									@include flex-box-horizontal;
+									font-size: 12px;
+									i{
+										width: 12px;
+										height:12px;
+										display: inline-block;
+										background: url(../../style/img/albumpage_count_1x.png?__sprite);
+										background-position:  right top;
+									}
+									span{
+										display:inline-block;
+										@include flex-box;
+										line-height:12px;
+										@include flex-box-align;
+										margin-left: 4px;
+										color: #888;
+									}
+								}
+							}
+						}
+						.hotsearch-tip{
+							width: 40px;
+							height: 80px;
+							position: relative;
+							.hotsearch-tip-icon{
+								width: 15px;
+								height: 15px;
+								background:url(../../style/img/add_albums_1x.png?__sprite) no-repeat;
+								position: absolute;
+								z-index: 999;
+								top:50%;left: 50%;
+								@include transform-translate(-50%,-50%);
+							}
+							.hotsearch-load-icon{
+								width: 15px;
+								height: 15px;
+								display: inline-block;
+								background:url(../../style/img/down_1x.png?__sprite) no-repeat center center;
+								@include transform-translate(-50%,-50%);
+								position: absolute;
+								z-index: 999;
+								top:50%;left: 50%;
+							}
+							.hotsearch-go-icon{
+								width: 9px;
+								height: 15px;
+								position: absolute;
+								z-index: 999;
+								@include transform-translate(-50%,-50%);
+								display: inline-block;
+								top:50%;left: 50%;
+								background:url(../../style/img/go_in_1x.png?__sprite);
+								background-position:  right top;
+							}
+						}
+						.hotsearch-tip:active{
+							opacity: 0.5;
+						}
+					}
+
+					.hotsearch-add{
+						width: 7.2%;
+						height: 50px;
+						.hotsearch-add-icon{
+							width: 18px;
+							height: 18px;
+							background: url(../../style/img/add_albums_1x.png);
+							background-size: 100% 100%;
+						}
+					}
+					.hotsearch-play{
+						width: 12.5%;
+						height: 50px;
+						.hotsearch-play-icon{
+							width: 18px;
+							height: 18px;
+							background: url(../../style/img/search_listen_1x.png);
+							background-size: 100% 100%;
+						}
+					}
+				}
+				.hotsearch-list-ev:active{
+					background: #e6e4e5;
+				}
+			}
+		}
+		.hotsearch-list-ev{
+					width: 100%;
+					@include  flex-box;
+					-moz-box-sizing: border-box; // FireFox3.5+
+				    -o-box-sizing: border-box; // Opera9.6(Presto内核)
+				    -webkit-box-sizing: border-box; // Safari3.2+
+				    -ms-box-sizing: border-box; // IE8
+				    box-sizing: border-box;
+					height: 80px;
+					padding-right: 8px;
+					background: #fff;
+					overflow: hidden;
+					position: relative;
+					&:after{
+						content: '';
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						right: auto;
+						top: auto;
+						height: 1px;
+						width: 100%;
+						background-color: $border-color;
+						display: block;
+						z-index: 15;
+						-webkit-transform-origin:50% 100%;
+						transform-origin:50% 100%;
+						transform:scaleY(0.5);
+					}
+					.hotsearch-list-ev-center{
+						@include  flex-box;
+						@include  flex-box-horizontal;
+						@include  flex-item;
+						overflow: hidden;
+						height: 100%;
+						.hotsearch-icon{
+							width: 80px;
+							height: 80px;
+							box-sizing:border-box;
+							display: block;
+							position: relative;
+							span{
+								width: 60px;
+								height: 60px;
+								position: absolute;
+								left: 50%;
+								top:50%;
+								transform:translate(-40%,-50%);
+								display: inline-block;
+								vertical-align: middle;
+								img{
+									width: 100%;
+									box-shadow: 0px 0px 1px 1px #ccc;
+									height: 60px;
+								}
+							}
+							.hotsearch-albumTag{
+								position: absolute;
+								width: 28px;
+								height: 13px;
+								line-height: 13px;
+								background: #82CE6A;
+								color: #fff;
+								font-size: 9px;
+								top:20px;
+								left: 10px;
+								text-align: center;
+							}
+							.hotsearch-name-icon-two{
+									i{
+										width: 35px;
+										height: 35px;
+										border-radius: 50%;
+										vertical-align: middle;
+										display: inline-block;
+										background:url(../../style/img/loadpic@2x.png) no-repeat center center;
+										background-size: 100% auto;
+										border: 1px solid #ccc;
+									}
+							}
+							&:after{
+								position: absolute;
+								content: '';
+								position: absolute;
+								left: 0;
+								bottom: 0;
+								right: auto;
+								top: auto;
+								height: 4px;
+								width: 100%;
+								background-color: #fff;
+								display: block;
+								z-index: 16;
+								-webkit-transform-origin:50% 100%;
+								transform-origin:50% 100%;
+								transform:scaleY(0.5);
+							}
+						}
+						.centertxt{
+							display:block;
+							@include  flex-box;
+							@include  flex-item;
+							box-sizing:border-box;
+							padding-left: 15px;
+							@include  flex-box-vertical;
+							@include  flex-box-bottom;
+							overflow: hidden;
+							.hotsearch-name{
+								@include  flex-item;
+								@include  flex-box;
+								@include flex-box-horizontal;
+								@include  flex-box-bottom;
+								overflow: hidden;
+								width:100%;
+								font-size: $album-action;
+								span{
+									display: block;
+									width:100%;
+									overflow: hidden;
+									white-space: nowrap;
+									text-overflow: ellipsis;
+								}
+								.defaultstyle{
+									@include  flex-item;
+									width:40%;
+									div{
+										width:100%;
+										height:12px;
+										background: #e0e0e0;
+										margin-left: 10px;
+									}
+								}
+							}
+							.hotsearch-detail{
+								@include flex-box;
+								@include flex-box-horizontal;
+								@include  flex-box-align;
+								@include flex-item;
+								width:100%;
+								padding-left: 15px;
+								//margin-top: 10px;
+								.detail-number{
+									//@include flex-item;
+									@include flex-box;
+									width: 72px;
+									color: #888;
+									height:14px;
+									@include flex-box-align;
+									font-size: 12px;
+									i{
+										width: 12px;
+										height:12px;
+										display: inline-block;
+										background: url(../../style/img/player_count_1x.png?__sprite);
+										background-position:  right top;
+									}
+									span{
+										display:inline-block;
+										@include flex-box;
+										@include flex-box-align;
+										margin-left: 4px;
+										line-height:12px;
+										color: #888;
+									}
+								}
+								.detail-often{
+									@include flex-item;
+									@include flex-box;
+									height:14px;
+									@include flex-box-align;
+									@include flex-box-horizontal;
+									color: #888;
+									font-size: 12px;
+									i{
+										width: 12px;
+										height:12px;
+										display: inline-block;
+										background: url(../../style/img/wake.png?__sprite) ;
+										background-position:  right top;
+									}
+									span{
+										display:inline-block;
+										@include flex-box;
+										line-height:12px;
+										@include flex-box-align;
+										margin-left: 6px;
+									}
+								}
+								.detail-album-number{
+									width: 72px;
+									color: #888;
+									height:14px;
+									@include flex-box;
+									@include flex-box-align;
+									@include flex-box-horizontal;
+									font-size: 12px;
+									i{
+										width: 12px;
+										height:12px;
+										display: inline-block;
+										background: url(../../style/img/albumpage_count_1x.png?__sprite);
+										background-position:  right top;
+									}
+									span{
+										display:inline-block;
+										@include flex-box;
+										line-height:12px;
+										@include flex-box-align;
+										margin-left: 4px;
+										color: #888;
+									}
+								}
+							}
+						}
+						.hotsearch-tip{
+							width: 40px;
+							height: 80px;
+							position: relative;
+							.hotsearch-tip-icon{
+								width: 15px;
+								height: 15px;
+								background:url(../../style/img/add_albums_1x.png?__sprite) no-repeat;
+								position: absolute;
+								z-index: 999;
+								top:50%;left: 50%;
+								@include transform-translate(-50%,-50%);
+							}
+							.hotsearch-load-icon{
+								width: 15px;
+								height: 15px;
+								display: inline-block;
+								background:url(../../style/img/down_1x.png?__sprite) no-repeat center center;
+								@include transform-translate(-50%,-50%);
+								position: absolute;
+								z-index: 999;
+								top:50%;left: 50%;
+							}
+							.hotsearch-go-icon{
+								width: 9px;
+								height: 15px;
+								position: absolute;
+								z-index: 999;
+								@include transform-translate(-50%,-50%);
+								display: inline-block;
+								top:50%;left: 50%;
+								background:url(../../style/img/go_in_1x.png?__sprite);
+								background-position:  right top;
+							}
+						}
+						.hotsearch-tip:active{
+							opacity: 0.5;
+						}
+					}
+
+					.hotsearch-add{
+						width: 7.2%;
+						height: 50px;
+						.hotsearch-add-icon{
+							width: 18px;
+							height: 18px;
+							background: url(../../style/img/add_albums_1x.png);
+							background-size: 100% 100%;
+						}
+					}
+					.hotsearch-play{
+						width: 12.5%;
+						height: 50px;
+						.hotsearch-play-icon{
+							width: 18px;
+							height: 18px;
+							background: url(../../style/img/search_listen_1x.png);
+							background-size: 100% 100%;
+						}
+					}
+				}
+				.hotsearch-list-ev:active{
+					background: #e6e4e5;
+				}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//新建专辑
+.album-list{
+
+	.albumlist:before,.albumlist:after{display: none;}
+	.list-block{margin-top:0;}
+	.item-inner:after{display: none;}
+	.item-media img{
+				background:url(../../style/img/loadpic@2x.png) no-repeat center center;
+				background-size: 50% auto;
+				border:none!important;
+
+	}
+	.item-title{
+		width: 134px;
+		text-overflow: ellipsis;
+		white-space:nowrap;
+		overflow: hidden;
+		font-size: 1.2rem;
+	}
+	.list-block{margin-top:0;}
+	.allplay{
+		height:40px;
+		width: 100%;
+		background:#f2f2f2;
+		text-align:center;
+		line-height:40px;
+		display: -moz-box;
+		display: -webkit-box;
+		-moz-box-align:center;
+		-webkit-box-align:center;
+		-moz-box-pack:center;
+		-webkit-box-pack:center;
+		span{
+			display: inline-block;
+		}
+	}
+	.playbtn{
+		width: 15px;
+		height: 15px;
+		display:inline-block;
+		background:url(../../style/img/add_albums_1x.png?__sprite);
+		margin-right:9px;
+	}
+	.downbtn{
+			width:15px;
+			height:15px;
+			display:inline-block;
+			background:url(../../style/img/down_1x.png?__sprite);
+			margin-right:9px;
+	}
+	.swipeout:after{
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: auto;
+		top: auto;
+		height: 1px;
+		width: 100%;
+		background-color: $border-color;
+		display: block;
+		z-index: 15;
+		-webkit-transform-origin:50% 100%;
+		transform-origin:50% 100%;
+		transform:scaleY(0.5);
+	}
+	.item-content{
+		font-size: 1.4rem;
+		.item-inner::after{
+			height: 0;
+		}
+		i{
+			width:20px;
+			height:20px;
+			margin-left:20px;
+			display:inline-block;
+		}
+		.player-addAlbums-icon{
+    		background:url(../../style/img/down_1x.png) center center;
+    		background-size: 100% 100%;
+
+
+    	}
+    	.player-download-icon{
+    		background:url(../../style/img/add_albums_1x.png) center center;
+    		background-size: 100% 100%;
+    	}
+    	.item-after{
+		}
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

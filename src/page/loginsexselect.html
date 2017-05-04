@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="with-statusbar-overlay">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--
+        @require "framework7/framework7.ios.css"
+    -->
+
+    <!--STYLE_PLACEHOLDER-->
+    <title>凯叔讲故事－登录宝宝性别选择页</title>
+</head>
+<body>
+     <div class="statusbar-overlay"></div>
+     <div class="views toolbar-through">
+            <div class="view view-main">
+                <div class="navbar" id="loginSexSelectNavbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="back back2contact link text-navbar login-navLeft">
+                                <img src="./style/img/back.png" width="24" height="24" alt="">
+                            </a>
+                        </div>
+                        <div class="center sliding">宝宝信息</div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+
+                <div class="pages">
+                     <div data-page="loginsexselect" class="page no-toolbar toolbar-fixed">
+
+
+                        <div class="page-content">
+                            <div class="login">
+                                <div class="login-content login-main" id="loginSexSelectView">
+                                    <section class="login-main-banner login-main-baby box-container-sub flex-center">
+                                        <div class="login-banner-baby" id="getOpenId">
+                                            让凯叔更懂你
+                                        </div>
+                                    </section>
+
+                                    <section class="login-main-content login-baby-content box-container-sub ">
+                                        <div class="box-container">
+                                            <div class="box-container-free box-container flex-direction-vertical flex-center">
+                                                <div class="login-baby-boy  flex-center">
+                                                    <img src="./style/img/boy_1x.png" alt="男孩">
+                                                </div>
+                                            </div>
+                                            <div class="box-container-free  flex-center">
+                                                <div class="login-baby-girl">
+                                                    <img src="./style/img/girl_1x.png" alt="女孩">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box-container box-baby-select">
+                                            <div class="box-container-free J_boyBaby flex-center">
+                                                <i class="sex-boy login-baby-icon">
+                                                </i>
+                                            </div>
+                                            <div class="box-container-free J_girlBaby flex-center">
+                                                <i class="sex-girl login-baby-icon">
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="audio-container">
+           <audio id="audio" class="player-audio" src=""  loop="loop" autoplay="autoplay" ></audio>
+        </div>        
+     </div>
+    <div id="modal-container"></div>
+    <script type="text/javascript" src="mod.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    
+    <!--SCRIPT_PLACEHOLDER-->
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <script type="text/javascript">
+        require('main');
+       
+    </script>
+    <script type="text/javascript">
+         document.getElementById('getOpenId').innerHTML = location.href;
+         alert('This is get openId Link '+location.href);
+    </script>
+    
+
+</body>
+</html>

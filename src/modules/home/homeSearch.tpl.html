@@ -1,0 +1,14 @@
+
+{{#hotSearchKewords}}
+<li>
+	<p class="hotmain-record" data-groupid="{{groupid}}">{{name}}</p>
+	<div class="hotmain-record-con">
+		{{#each taglist}}
+		<a class="J_collect J_collect_panel hotmain-record-con-a tagid" data-tagid ="{{tagid}}" href="page/tagPage.html?type=tag&id={{tagid}}&albumName={{tagname}}" data-alisname="{{tagname}}" data-type="search-tag">{{tagname}}</a>
+		{{/each}}
+	</div>
+</li>
+{{/hotSearchKewords}}
+
+
+

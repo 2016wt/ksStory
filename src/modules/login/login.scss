@@ -1,0 +1,358 @@
+@import "../../style/scss/mixins";
+.login-navLeft{
+	display: block;
+	height: 100%;
+	img{
+		vertical-align: middle;
+		display: inline-block;
+	}
+}
+.login{
+	width:100%;
+	height: 100%;
+	background: none;
+	overflow: hidden;
+	.login-content{
+		width: 100%;
+		height: 100%;
+
+	}
+	.login-main{
+		padding-top: 44px;
+		.login-main-banner{
+			height: 202px;
+			padding-top: 56px;
+			position: relative;
+			.login-banner-con{
+				width: 80px;
+				height: 116.5px;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.login-banner-startcon{
+				width: 90px;
+				height: 90px;
+				box-shadow: 1px 1px  #333;
+				border-radius: 15px;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.login-banner-prompt{
+				width: auto;
+				height: 30px;
+				position: absolute;
+				left: 50%;
+				display: none;
+				bottom: 17px;
+				border-radius: 3px;
+				-webkit-transform:translate(-50%, 0);
+				color: #fff;
+				background: rgba(0, 0, 0, 0.4);
+				i{
+					padding: 0 10px;
+					height: 100%;
+					display: inline-block;
+					em{
+						vertical-align: middle;
+						display: inline-block;
+						width: 16px;
+						height: 16px;
+						background: url(./../style/img/prompt_1x.png?__sprite);
+					}
+				}
+				span{
+					display: inline-block;
+					width: auto;
+					padding-right:10px;
+					position: relative;
+					height: 100%;
+					line-height: 30px
+				}
+			}
+		}
+		.login-main-content{
+			width: 100%;
+			min-height:168px;
+			height: auto!important;
+			height: 168px;
+			padding: 23px 35px 0 35px;
+			.login-account{
+				width: 100%;
+				height: 36px;
+				border-bottom: 1px solid $border-color;
+				label{
+					height: 90%;
+					padding: 0 3px;
+					display: inline-block;
+					.login-account-icon{
+						transform:scale(0.9);
+						width: 18px;
+						height: 24px;
+						display: inline-block;
+						vertical-align: middle;
+						background:url(./../style/img/login_account_1x.png?__sprite);
+					}
+				}
+				input{
+					border: 0;
+					background: none;
+					width: 88%;
+					height: 36px;
+					text-indent: 7px;
+				}
+			}
+			.login-pwd{
+				margin-top: 17px;
+				width: 100%;
+				height: 36px;
+				position: relative;
+				border-bottom: 1px solid $border-color;
+				label{
+					height: 60%;
+					padding: 0 3px;
+					display: inline-block;
+					.login-pwd-icon{
+						transform:scale(0.9);
+						width: 18px;
+						height: 24px;
+						display: inline-block;
+						vertical-align: middle;
+						background:url(./../style/img/login_pwd_1x.png?__sprite);
+					}
+				}
+				input{
+					border: 0;
+					background: none;
+					width: 88%;
+					height: 36px;
+					text-indent: 7px;
+				}
+				.login-obtain-pwd{
+					width: 65px;
+					height: 25px;
+					background: $primary-color;
+					position: absolute;
+					right: 8px;
+					top: 50%;
+					-webkit-transform:translate(0, -50%);
+					border-radius: 3px;
+					line-height: 25px;
+					text-align: center;
+					color: #fff;
+				}
+				.login-obtain-bg{
+					background: #888;
+				}
+			}
+			.login-submit{
+				width: 100%;
+				height: 36px;
+				padding-top: 25px;
+				input{
+					width: 100%;
+					height: 100%;
+					background-color: #93cfe7;
+					border: 0;
+					border-radius: 5px;
+					color: #fff;
+				}
+				input:hover{
+					background-color: #3baedc;
+				}
+			}
+			.login-account-focusIn{
+				border-radius: 5px;
+				box-shadow: 0px 0px 1px 0px #888;
+			}
+			.login-account-focusout-fasle{
+				border-radius: 5px;
+				box-shadow: 0px 0px 1px 0px red;
+			}
+			.login-account-focusout-true{
+				border-radius: 5px;
+				box-shadow: 0px 0px 1px 0px #82ce6a;
+			}
+			.login-pwd-focusIn{
+				border-radius: 5px;
+				box-shadow: 0px 0px 1px 0px #888;
+			}
+			.login-pwd-focusout-fasle{
+				border-radius: 5px;
+				box-shadow: 0px 0px 1px 0px red;
+			}
+			.login-pwd-focusout-true{
+				border-radius: 5px;
+				box-shadow: 0px 0px 1px 0px #82ce6a;
+			}
+
+		}
+
+		.login-main-start{
+			padding-top: 67.5px;
+		}
+		.login-start-content{
+			.login-weChat{
+				width: 100%;
+				height: 36px;
+				padding-top:60px;
+				.login-weChat-button{
+					a{
+						display: block;
+						line-height: 36px;
+						height: 36px;
+						text-align: center;
+						background: #82ce6a;
+						border-radius: 5px;
+						color: #fff;
+					}
+					a:active{
+						background: #5fa648;
+					}
+				}
+			}
+			.login-phoneMobile{
+				width: 100%;
+				height: 36px;
+				padding-top:20.5px; 
+				.login-phoneMobile-button{
+					a{
+						display: block;
+						line-height: 36px;
+						height: 36px;
+						text-align: center;
+						background: #93cfe7;
+						border-radius: 5px;
+						color: #fff;
+						font-weight: 100!important;
+
+					}
+					a:active{
+							background: #3baedc;
+					}
+				}
+			}
+		}
+
+		.login-main-baby{
+			padding-top: 125px;
+			height: 170px;
+			.login-banner-baby{
+				font-size: $login-banner-baby;
+				color: $primary-color;
+			}
+		}
+		.login-baby-content{
+			width: 100%;
+			padding: 0 40px;
+			.login-baby-boy{
+				width: 80px;
+				height: 77.5px;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.login-baby-girl{
+				width: 80px;
+				height: 77.5px;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.box-baby-select{
+				padding-top: 18px;
+				i{
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					vertical-align: middle;
+				}
+				.login-baby-icon{
+					background:url(./../style/img/login_unselected_1x.png?__sprite);
+				}
+				.login-baby-icon-sel{
+					background:url(./../style/img/login_selected_1x.png?__sprite);
+				}
+			}
+
+		}
+
+		.login-baby-submit{
+			.login-banner-baby-theme{
+				padding-top: 52.5px;
+				span{
+					font-size:$login-banner-baby;
+					color: $primary-color;
+				}
+			}
+			.login-banner-baby-icon{
+				padding-top: 34px;
+				width: 104px;
+				height: 95px;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		.login-submit-content{
+
+			padding-top: 77px;
+			.login-submit-content-bornData{
+				width: 161.5px;
+				height: 33px;
+				//border: 1px solid  $primary-color;
+				//border-radius: 3px;
+				color: $primary-color;
+				font-size: $login-submit-bornData;
+				line-height: 33px;
+				text-indent: 63px;
+				background: url(../../style/img/birthday_1x.png); 
+				background-size: 100% 100%;
+				position: relative;
+				.login-submit-data{
+					width: 120px;
+					height: 20px;
+					position: absolute;
+					left: 40%;
+					top: 50%;
+					transform:translate(0,-50%);
+					background: none;
+					border: 0;
+					color: $primary-color;
+					font-size: $login-submit-bornData;
+					background: none;
+					border: none;
+					cursor: pointer;
+					// line-height: 36px;
+
+				}
+			}
+			.login-submit-content-complete{
+				text-align: center;
+				line-height: 36px;
+				height: 36px;
+				width: 100%;
+				margin-top: 76.5px;
+				border-radius: 5px;
+				background: #93cfe7;
+				color: #fff;
+
+			}
+			.login-submit-content-complete:active{
+				background: #3baedc;
+			}
+		}
+
+	}
+
+}
+
+
+
+

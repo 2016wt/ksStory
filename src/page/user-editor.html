@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="with-statusbar-overlay">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--
+        @require "framework7/framework7.ios.css"
+    -->
+
+    <!--STYLE_PLACEHOLDER-->
+    <title>凯叔讲故事</title>
+</head>
+<body>
+     <div class="statusbar-overlay"></div>
+     <div class="views toolbar-through">
+        <div class="view view-main">
+            <div class="pages">
+                 <div data-page="editor" class="page no-toolbar toolbar-fixed">
+                 <div class="section editor">
+                      <div class="navbar" id="editorNavbar">
+                          <div class="navbar-inner">
+                              <div class="left">
+                                  <a href="" class="back back2contact link text-navbar">
+                                      <img src="./style/img/newback_1x.png" width="13" height="21" alt="">
+                                  </a>
+                              </div>
+                              <div class="center chat-name sliding">宝宝信息</div>
+                              <div class="right chat-name sliding">保存</div>
+                          </div>
+                      </div>
+                      <div class="editor-content">
+                        <div class="list-block">
+                          <ul class="optlist" id="optlist">
+                            
+                            <li>
+                              <a href="#" class="item-link item-content open-info">
+                               
+                                <div class="item-inner">
+                                  <div class="item-title">昵称</div>
+                                  <div class="item-after"><input type="text"  class="name" value="凯叔讲故事"></div>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="item-link item-content open-info">
+                              
+                                <div class="item-inner">
+                                  <div class="item-title">宝宝性别</div>
+                                  <div class="item-after">
+                                 
+                                      <select name="" class="sexopt" id="sexopt" value="">
+                                        <option value="">男</option>
+                                        <option value="">女</option>
+                                      </select>
+                                  </div>
+                                </div>
+                              </a>
+                            </li> <li>
+                              <a href="#" class="item-link item-content open-info">
+                              
+                                <div class="item-inner">
+                                  <div class="item-title">宝宝生日</div>
+                                  <div class="item-after">
+
+                                  <input type="date" class="dateopt" value="2015-2-3" id="dateopt" >
+                                 
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+
+                          </ul>
+                          
+                           
+
+
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+             
+     </div>
+    <div id="modal-container"></div>
+    <script type="text/javascript" src="mod.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    
+    <!--SCRIPT_PLACEHOLDER-->
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <script type="text/javascript">
+        require('main');
+    </script>
+    
+
+</body>
+</html>

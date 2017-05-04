@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="with-statusbar-overlay">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--
+        @require "framework7/framework7.ios.css"
+    -->
+
+    <!--STYLE_PLACEHOLDER-->
+    <title>凯叔讲故事</title>
+</head>
+<body>
+     <div class="statusbar-overlay"></div>
+     <div class="views toolbar-through">
+          <div class="view view-main">
+                <div class="pages">
+                    <div data-page="editNewAlbumsName" class="page no-toolbar toolbar-fixed">
+                        <div class="albumNav" id="editNewAlbumsNameNavbar">
+                          <div class="albumNav-inner box-container">
+                                <div class="albumNav-left">
+                                    <a href="#" class="back back2contact link text-navbar">
+                                        <img src="./style/img/newback_1x.png" width="13" height="21" alt="">
+                                    </a>
+                                </div>
+                                <div class="J_albumPageTitle box-container-free albumNav-center flex-container-vertical">新建专辑</div>
+
+                                <div class="albumNav-right box-container-sub flex-container-vertical editNewAlbumsName-right ">
+                                    <a class="J_determineName albumNav-right-a" href="#">确定</a>
+                                </div>
+                          </div>
+                      </div>
+                        <div class="page-content">
+                            <div class="editNewAlbumsName">
+                                
+
+                                <section class="newAlbums-main" id="editNewAlbumsNameView">
+                                  <div class="page-content">
+                                    <input class="editNewAlbumsName-input" id="editNewAlbumsNameValue" placeholder="凯叔讲故事" type="search">
+                                  </div>
+                                </section>
+
+                            </div>
+                         </div>
+                    </div>
+
+                </div>
+          </div>
+          <div id="audio-container">
+             <audio id="audio" class="player-audio" src=""  loop="loop" autoplay="autoplay" ></audio>
+          </div>
+    </div>
+    <div id="modal-container"></div>
+    <script type="text/javascript" src="mod.js"></script>
+    <script type="text/javascript" src="http://framework7.taobao.org/dist/js/framework7.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+
+    <!--SCRIPT_PLACEHOLDER-->
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <script type="text/javascript">
+        require('main');
+    </script>
+    
+
+</body>
+</html>

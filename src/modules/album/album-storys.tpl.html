@@ -1,0 +1,28 @@
+{{#storyList}}
+   <section class="album-item-wrap">
+      <div class="album-item-content">
+
+         <div class="J_albumItem item-content-left" data-storyid="{{storyid}}" data-storytime="{{timetext}}">
+           <img class="albumItem-img" src="{{iconurl}}" alt="" width="100%" height="auto">
+           <i class="item-ck"></i>
+         </div>
+         <div class=" item-content-center">
+            <div class="album-content-title"><span>{{storyname}}</span></div>
+            <div class="album-content-labels">
+            	<!-- {{#each tags}}
+                <span class="label-item" data-tagvalue="{{tagvalue}}">{{this.tagname}}</span>
+              {{/each}} -->
+              <div class="detail-number"><i></i><span>{{playcount}}</span></div>
+              <div class="detail-often"><i></i><span>{{timetext}}</span></div>
+            </div>
+         </div>
+         <!-- <div class="item-content-right">
+              <p class="album-item-time"> <span>{{timetext}}</span></p>
+              <div class="album-theme-playerNumber">
+                <i class="play-count-icon"></i>
+                <span class="play-count-text">{{playcount}}</span>
+              </div>
+         </div> -->
+      </div>
+    </section>
+{{/storyList}}

@@ -1,0 +1,12 @@
+{
+  "name": "ks-story-static",
+  "description": "",
+  "version": "1.0.0",
+  "author": "zhangsan",
+  "license": "MIT",
+  "devDependencies": {
+    "fis3-hook-commonjs": "^0.1.0",
+    "fis3-postpackager-loader": "^1.3.0",
+    "fis-parser-node-sass": "^0.1.9"
+  }
+}

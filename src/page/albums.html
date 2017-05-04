@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="with-statusbar-overlay">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--
+        @require "framework7/framework7.ios.css"
+    -->
+
+    <!--STYLE_PLACEHOLDER-->
+    <title>凯叔讲故事</title>
+</head>
+<body>
+     <div class="statusbar-overlay"></div>
+     <div class="views">
+        <div class="view view-main">
+            <div class="pages">
+
+                 <div data-page="albums" class="page no-toolbar toolbar-fixed ">
+                      <div class="albumNav" id="albumNavbar">
+                          <div class="albumNav-inner box-container">
+                              <div class="albumNav-left">
+                                  <a href="#" class="back back2contact link text-navbar">
+                                      <img src="./style/img/newback_1x.png" width="13" height="21" alt="">
+                                  </a>
+                              </div>
+                              <div class="J_albumPageTitle box-container-free albumNav-center  newAlbumsNavName">
+                                   <span class="J_albumPageName newAlbumsName">新建专辑</span>
+                                  <span class="newAlbums-symbol" ></span>
+                              </div>
+                              <div class="albumNav-right box-container-sub flex-container-vertical"></div>
+                          </div>
+                      </div>
+                      <div class="page-content albumsBox">
+                          <div class="album-head" id="albumHeadView">
+                                  <div class="J_albumAllCK box-center album-head-ck">
+                                        <i class="item-ck"></i>
+                                  </div>
+                                  <p class="album-heand-text">全选</p>  
+                              </div>
+                          <div class="album">
+                              <div class="album-tag-panel">
+                                    <div class="album-tag-content">
+                                        <ul class="J_tagWrap tag-wrap" id="tagWrapView">
+
+                                        </ul>
+                                    </div>
+                              </div>
+                              <!-- <div class="loading-overlay modal-overlay modal-overlay-visible album-tag-panel-bg">
+                                <div class="album-tag-panel">
+
+                                </div>
+                              </div> -->
+                              <div class="album-main" id="albumView">
+                                          <section class="album-item-wrap">
+                                            <!-- <div class="J_albumItem box-center album-item-ck">
+                                              <i class="item-ck"></i>
+                                            </div> -->
+                                            <div class="box-container album-item-content">
+                                               <div class="J_albumItem box-container-sub item-content-left" data-storyid="19020" data-storytime="6:12">
+                                                 <!-- <img src="" alt="" width="100%" height="100%"> -->
+                                                 <i class="item-ck"></i>
+                                               </div>
+                                               <div class="box-container-sub box-container-free item-content-center">
+                                                  <p class="album-content-title">公主</p>
+                                                  <p class="album-content-labels">
+                                                      <span class="label-item">2~10岁</span>
+                                                      <span class="label-item">小公举小公主</span>
+                                                  </p>
+                                               </div>
+                                               <div class="box-container-sub item-content-right">
+                                                    <p class="album-item-time">13:13</p>
+                                                    <div class="album-theme-playerNumber">
+                                                      <i class="play-count-icon"></i>
+                                                      <span class="play-count-text">21321</span>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                          </section>
+
+                                          <section class="album-item-wrap">
+                                            <!-- <div class="J_albumItem box-center album-item-ck">
+                                              <i class="item-ck"></i>
+                                            </div> -->
+                                            <div class="box-container album-item-content">
+                                               <div class="J_albumItem box-container-sub item-content-left" data-storyid="28302" data-storytime="10:28">
+                                                 <!-- <img src="" alt="" width="100%" height="100%"> -->
+                                                 <i class="item-ck"></i>
+                                               </div>
+                                               <div class="box-container-sub box-container-free item-content-center">
+                                                  <p class="album-content-title">公主 13:13</p>
+                                                  <p class="album-content-labels">
+                                                      <span class="label-item">2~10岁</span>
+                                                      <span class="label-item">小公举小公主</span>
+                                                  </p>
+                                               </div>
+                                               <div class="box-container-sub item-content-right">
+                                                    <div class="album-theme-playerNumber">
+                                                      <i class="play-count-icon"></i>
+                                                      <span class="play-count-text">21321</span>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                          </section>
+
+                                          <section class="album-item-wrap">
+                                            <!-- <div class="J_albumItem box-center album-item-ck">
+                                              <i class="item-ck"></i>
+                                            </div> -->
+                                            <div class="box-container album-item-content">
+                                               <div class="J_albumItem box-container-sub item-content-left" data-storyid="16253" data-storytime="2:28">
+                                                 <!-- <img src="" alt="" width="100%" height="100%"> -->
+                                                 <i class="item-ck"></i>
+                                               </div>
+                                               <div class="box-container-sub box-container-free item-content-center">
+                                                  <p class="album-content-title">公主 13:13</p>
+                                                  <p class="album-content-labels">
+                                                      <span class="label-item">2~10岁</span>
+                                                      <span class="label-item">小公举小公主</span>
+                                                  </p>
+                                               </div>
+                                               <div class="box-container-sub item-content-right">
+                                                    <div class="album-theme-playerNumber">
+                                                      <i class="play-count-icon"></i>
+                                                      <span class="play-count-text">21321</span>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                          </section>
+                              </div>
+                              <div class="load-over">客官~木有啦</div>
+
+                              <div class="J_playerMask player-mask" id="J_playerMask">
+                              </div>
+                              <div class="box-container album-action" id="albumAction">
+                                  <!-- <div class="box-container-sub box-center album-action-left">
+                                    <img src="../style/img/album_group_2x.png" alt="" width="40" height="40">
+                                    <i class="album-action-count">10</i>
+                                  </div> -->
+                                  <div class="box-container-sub box-container-free album-action-center">
+                                    <span class="J_ckStoryTotal album-action-allCount">6</span>
+                                      个故事累计时长：
+
+                                    <span class="J_ckStoryAllTime album-action-allTime">00:00</span>
+                                  </div>
+                                  <div class="box-container-sub album-action-right J_goNewAlbums">
+                                    保存
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+            <div id="audio-container">
+               <audio id="audio" class="player-audio" src=""  loop="loop" autoplay="autoplay" ></audio>
+            </div>        
+        </div>
+    </div>
+    <div id="modal-container"></div>
+<!--     <script src="http://s11.cnzz.com/z_stat.php?id=1259274367&web_id=1259274367" language="JavaScript"></script>
+ -->    <script type="text/javascript" src="mod.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    
+    <!--SCRIPT_PLACEHOLDER-->
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <script type="text/javascript">
+        require('main');
+    </script>
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?1db2f66ca5491f4e2727cc242a2f5535";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    
+
+</body>
+</html>

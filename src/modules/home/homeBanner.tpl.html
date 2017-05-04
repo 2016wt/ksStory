@@ -1,0 +1,24 @@
+ <div class="swiper-container home-banner">
+    <div class="swiper-wrapper">
+    {{#bannerList}}
+      <div class="swiper-slide">
+        {{#rif type "==" "web"}}
+      	<a data-href="{{link}}" href="#" data-alisname="{{storyname}}" data-type="home-ad" class="external J_collect">
+      	{{/rif}}
+      	{{#rif type "==" "ablum"}}
+      		{{#with param.ablumvalue}}
+      		<a data-href="{{../../../HOST}}/page/albumPage.html?type=album&id={{ablumid}}&albumName={{ablumname}}" href="#" data-alisname="{{ablumname}}"  data-type="home-ad" class="J_collect">
+      		{{/with}}
+      	{{/rif}}
+      	{{#rif type "==" "story"}}
+      		{{#with param.storyvalue}}
+      		<a data-href="{{../../../HOST}}/page/player.html?type=story&storyId={{storyid}}&storyName={{storyname}}" href="#" data-alisname="{{storyname}}"  data-type="home-ad" class="J_collect">
+      		{{/with}}
+      	{{/rif}}
+      	<img src="{{imgurl}}" alt="" width="100%" height="145">
+      	</a> 
+      </div>
+     {{/bannerList}}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>

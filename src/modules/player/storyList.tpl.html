@@ -1,0 +1,21 @@
+
+       {{#storyList}}
+        <li>
+            <div class="item-content">
+              <div class="item-media"> <img src="{{iconurl}}" alt=""> </div>
+              <div class="item-inner player-item-inner">
+                <div class="J_playerItem item-title player-item-title" data-key="{{@index}}" data-storyid="{{storyid}}"  data-storysrc="{{voiceurl}}">
+                     <!-- <span><i class="J_playerAddAlbums player-sonic-icon"></i></span> -->  
+                     <span class="J_playerStatus" data-storyid="{{storyid}}">{{storyname}}</span>
+                </div>
+                <div class="item-after">
+                    <a data-href="{{../../HOST}}/page/appDownload.html" class="external app-download-link collect-link" data-type="playerlist-collect-icon" data-alisname="收藏"><span><i class="J_playerAddAlbums player-addAlbums-icon app-download-link collect-link"  data-type="playerlist-clooect-icon" data-alisname="收藏"></i></span></a>
+                    <a data-href="{{../../HOST}}/page/appDownload.html" class="external app-download-link downapp-link" data-type="playerlist-down-icon" data-alisname="下载"><span><i class="J_playerAddAlbums player-download-icon app-download-link downapp-link"  data-type="playerlist-down-icon" data-alisname="下载"></i></span> </a>
+                </div>
+              </div>
+            </div>
+            <!-- 可排序句柄  -->
+            <div class="sortable-handler"></div>
+        </li>
+    {{/storyList}}
+  

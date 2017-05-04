@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="with-statusbar-overlay">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--
+        @require "framework7/framework7.ios.css"
+    -->
+
+    <!--STYLE_PLACEHOLDER-->
+    <title>凯叔讲故事</title>
+</head>
+<body>
+     <div class="statusbar-overlay"></div>
+     <div class="views toolbar-through">
+        <div class="view view-main">
+            <div class="pages">
+                 <div data-page="player" class="page no-toolbar toolbar-fixed">
+                    <div class="navbar" id="playerNavbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <a href="#" class="back back2contact link text-navbar">
+                                    <img src="./style/img/back.png" width="24" height="24" alt="">
+                                </a>
+                            </div>
+                            <div class="J_playerPageTitle  center chat-name sliding">公主故事</div>
+                             <div class="right">
+                                <a href="#" data-picker=".player-picker" class="J_playerPicker link open-picker">
+                                   <img src="./style/img/more_1x.png" width="24" height="5" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                        <div class="player">
+                            <div class="player-content player-main" id="playerView">
+                                 
+
+                                <div class="swiper-container  player-swiper-container">
+                                    <div class="swiper-wrapper">
+                                      <!--故事播列表Start-->
+                                      <div class="swiper-slide" >
+                                            <!-- 可排序列表 -->
+                                            <div class="list-block sortable player-list-block">
+                                                <ul id="storyListsView">
+                                                  <li>
+                                                    <div class="item-content">
+                                                      <div class="item-media"></div>
+                                                      <div class="item-inner player-item-inner">
+                                                        <div class="item-title">
+                                                             <span>白雪公主</span>
+                                                             <!-- <span><i class="J_playerAddAlbums player-sonic-icon"></i></span> -->  
+                                                             <span><img src="../../style/img/sonic_1x.gif" alt="" width="24" height="24"></span>
+                                                        </div>
+                                                        <div class="item-after">
+                                                            <span><i class="J_playerAddAlbums player-addAlbums-icon"></i></span>
+                                                            <span><i class="J_playerAddAlbums player-download-icon"></i></span> 
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <!-- 可排序句柄  -->
+                                                    <div class="sortable-handler"></div>
+                                                  </li>
+                                                  <li>
+                                                    <div class="item-content">
+                                                      <div class="item-media"></div>
+                                                      <div class="item-inner player-item-inner">
+                                                        <div class="item-title">
+                                                        <span>王子和公主</span>
+                                                        <span></span>
+                                                        </div>
+                                                        <div class="item-after">
+                                                            <span><i class="J_playerAddAlbums player-addAlbums-icon"></i></span>
+                                                            <span><i class="J_playerAddAlbums player-download-icon"></i></span> 
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <!-- 可排序句柄  -->
+                                                    <div class="sortable-handler"></div>
+                                                  </li>
+                                                   <li>
+                                                    <div class="item-content">
+                                                      <div class="item-media"></div>
+                                                      <div class="item-inner player-item-inner">
+                                                        <div class="item-title">
+                                                            <span>小矮人</span>
+                                                            <span></span>
+                                                        </div>
+                                                        <div class="item-after">
+                                                            <span><i class="J_playerAddAlbums player-addAlbums-icon"></i></span>
+                                                            <span><i class="J_playerAddAlbums player-download-icon"></i></span>  
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <!-- 可排序句柄  -->
+                                                    <div class="sortable-handler"></div>
+                                                  </li>
+                                                </ul>
+
+                                            </div>
+                                      </div>
+                                      <!--故事播列表End-->
+                                      <!--故事播放器Start-->
+                                      <div class="swiper-slide" id="storyPlayerView">
+                                            <!--播放控制按钮start-->
+                                            <button id="control" class="player-headImg player-headImg-on">loading</button>
+                                            <!--播放控制按钮end-->
+                                            <!--播放故事主题start-->
+                                            <p  class="player-theme-title">白雪公主</p>
+                                            <!--播放故事主题end-->
+                                            <main class="player-blurry">
+                                                <!--audiostart-->
+                                                <!-- <audio id="audio" class="player-audio" src="http://cdn.kaishuhezi.com/audio/story/M-3-01-20150408.mp3"  loop="loop" autoplay="autoplay" ></audio> -->
+                                                <!--audio End-->
+                                            </main>
+
+                                            <div class="flex-container player-like">
+                                                <div class="player-like-item"><i class="J_playerCollect player-collect-icon"></i></div>
+                                                <div class="player-like-item"><i class="J_playerDownload player-download-icon"></i></div>
+                                                <div class="player-like-item"><i class="J_playerAddAlbums player-addAlbums-icon"></i></div>
+                                            </div>
+
+                                            <section class="box-container player-status-wrap">
+                                                <div class="box-container-sub player-time-left">
+                                                    <span class="currentTime" id="currentTime">00:00</span> 
+                                                </div>
+                                                <!--时间进度条块儿start-->
+                                                <section class="box-container-sub box-container-free player-progressBar">
+                                                    <div class="player-progressBac"></div>
+                                                    <div class="player-speed" id="speed"></div>
+                                                    <div class="player-drag" id="drag"></div>
+                                                </section>
+                                                <!--时间进度条块儿end-->
+                                                <div class="box-container-sub player-time-right">
+                                                    <span class="allTime" id="allTime">00:00</span>
+                                                </div>
+                                            </section>
+                                        
+                                      </div>
+                                      <!--故事播放器End-->
+                                      <div class="swiper-slide" id="storyCommentView">
+                                         <div class="player-comment-wrap">
+                                            
+                                            <div class="flex-container-center player-comment-head">
+                                                <div class="comment-title">评论（<span class="J_commentCount">232</span>）</div>
+                                                <div class="J_commentEdit open-popup comment-open" data-popup=".popup-comment"><i class="player-edit-icon"></i>写评论 </div>
+                                            </div>
+                                            <div class="" id="J_commentDetal">
+                                                <div class="player-comment-detai">
+                                                    <div class="box-container player-boss-desc">
+                                                        <div class="box-container-sub player-boss-headImg"></div>
+                                                        <div class="box-container-sub box-container-free player-boss-text">
+                                                            BOSS说，不错不错！BOSS说，不错不错！BOSS说，不错不错！BOSS说，不错不错！
+                                                            BOSS说，不错不错！BOSS说，不错不错！BOSS说，不错不错！BOSS说，不错不错！
+                                                            BOSS说，不错不错！BOSS说，不错不错！BOSS说，不错不错！BOSS说，不错不错！
+                                                        </div>
+                                                        <div class="box-container-sub player-boss-blank"></div>
+                                                    </div>
+                                                    <div class="list-block">
+                                                    <ul>
+                                                      <li>
+                                                        <div class="item-content">
+                                                          <div class="item-media"></div>
+                                                          <div class="item-inner">
+                                                            <div class="item-content comment-content">
+                                                                 评论内容   
+                                                            </div>
+                                                            <div class="item-after">
+                                                                <span><i class="J_commentPraise player-praise-icon"></i></span>
+                                                                <span>999+</span> 
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </li>   
+
+                                                       <li>
+                                                        <div class="item-content">
+                                                          <div class="item-media"></div>
+                                                          <div class="item-inner">
+                                                            <div class="item-content comment-content">
+                                                                 评论内容评论内容评论内容评论内容评论内容评论内容       
+                                                                 评论内容   评论内容评论内容评论内容评论内容评论内容    
+                                                                 评论内容   评论内容评论内容评论内容评论内容评论内容    
+                                                                 评论内容   评论内容评论内容评论内容评论内容评论内容    
+                                                            </div>
+                                                            <div class="item-after">
+                                                                <span><i class="J_commentPraise player-praise-icon"></i></span>
+                                                                <span>999+</span> 
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </li>  
+
+                                                      <li>
+                                                        <div class="item-content">
+                                                          <div class="item-media"></div>
+                                                          <div class="item-inner">
+                                                            <div class="item-content comment-content">
+                                                                 评论内容   
+                                                            </div>
+                                                            <div class="item-after">
+                                                                <span><i class="J_commentPraise player-praise-icon"></i></span>
+                                                                <span>999+</span> 
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </li> 
+                                                         
+                                                    </ul>
+                                                </div>
+                                                </div>
+                                            </div>
+                                         </div>
+                                      </div>
+                                    </div>
+                                    
+                                </div>      
+                                <div class="swiper-pagination"></div>
+
+
+                            </div>
+                            <div class="player-mask"></div>
+                        </div>
+                        <div class="flex-container player-action" id="playerAction">
+                            <div class="J_playerPrevious J_playerActionItem player-action-item" data-action="previous">
+                              <i class="player-previous-icon"></i>
+                            </div>
+                            <div class="J_playerControl J_playerActionItem player-action-item play"  data-action="control">
+                              <i class="player-control-icon"></i>
+                            </div>
+                            <div class="J_playerNext J_playerActionItem player-action-item"  data-action="next">
+                              <i class="player-next-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="audio-container">
+           <audio id="audio" class="player-audio" src=""  loop="loop" autoplay="autoplay" ></audio>
+        </div>        
+     </div>
+    <div id="modal-container"></div>
+   <!--  <script type="text/javascript" src="mod.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+
+    http://weixin.kaishustory.com/m/page/player.html?type=story&storyId=19&storyName=你别想让河马走开
+
+    http://weixin.kaishustory.com/m/page/player.html?type=album&albumId=2&storyId=100334&storyName=火烧观音院
+
+    <script type="text/javascript">
+        require('main');
+    </script> -->
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script>
+      $(function(){
+        $.ajax({
+          //async: false,
+          //method : 'GET',
+          url : 'http://tapi.kaishustory.com/demo/userservice/bady/update',
+          contentType:'application/json',
+          //headers:{'Access-Control-Allow-Origin':'*'},
+          data : JSON.stringify({id:'1'}),
+          // xhrFields:{
+          //       withCredentials:true
+          //   },
+          //crossDomain:'true',
+          //processData:true,
+          success : function(res) {
+
+          }
+        })
+      })
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="with-statusbar-overlay">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--
+        @require "framework7/framework7.ios.css"
+    -->
+
+    <!--STYLE_PLACEHOLDER-->
+    <title>凯叔讲故事</title>
+</head>
+<body>
+     <div class="statusbar-overlay"></div>
+     <div class="views toolbar-through">
+        <div class="view view-main">
+
+            <div class="pages">
+                <div data-page="newAlbums" class="page no-toolbar toolbar-fixed">
+                    <div class="albumNav" id="newAlbumsNavbar">
+                          <div class="albumNav-inner box-container">
+                              <div class="albumNav-left J_listenDomTree">
+                                    <span class="back">
+                                        <img src="./style/img/newback_1x.png" width="13" height="21" alt="">
+                                    </span>
+                              </div>
+                              <div class="box-container-free albumNav-center  newAlbumsNavName">
+                                  <span class="newAlbumsName obtainNewAlbumsName">新建故事单</span>
+                                  <span class="newAlbums-editor J_goEditorName" ></span>
+                              </div>
+
+                              <div class="albumNav-right box-container-sub flex-container-vertical"></div>
+                          </div>
+                    </div>
+                    <div class="page-content newAlbumsBox">
+                        <div class="section newAlbums">
+                            <section class="newAlbums-maincontent" id="newAlbumsView">
+                                <div class="list-block sortable sortable-opened">
+                                        <ul id="newAlbumsViewUl">
+                                            <li class="newAlbums-list-li">
+                                              <div class="sortable-handler newAlbums-list-left"></div>
+                                              <div class="item-content newAlbums-content">
+                                                <div class="item-media newAlbums-list-center"></div>
+                                                <div class="item-inner newAlbums-list-right">
+                                                    <div data-storyId = "{{storyid}}" data-storytime ="{{timetext}}" class="item-title  newAlbums-listRight-text">
+                                                      {{storyname}}
+                                                    </div>
+                                                    <div class="item-after newAlbums-listRight-icon">
+                                                      <span class="J_newAlbumsReduce newAlbums-reduce"></span>
+                                                      <i class = "J_newAlbumsCount">1</i>
+                                                      <em class="J_newAlbumsAdd newAlbums-add"></em>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </li>
+                                            <li class="newAlbums-list-li">
+                                              <div class="sortable-handler newAlbums-list-left"></div>
+                                              <div class="item-content newAlbums-content">
+                                                <div class="item-media newAlbums-list-center"></div>
+                                                <div class="item-inner newAlbums-list-right">
+                                                    <div data-storyId = "{{storyid}}" data-storytime ="{{timetext}}" class="item-title  newAlbums-listRight-text">
+                                                      {{storyname}}
+                                                    </div>
+                                                    <div class="item-after newAlbums-listRight-icon">
+                                                      <span class="J_newAlbumsReduce newAlbums-reduce"></span>
+                                                      <i class = "J_newAlbumsCount">1</i>
+                                                      <em class="J_newAlbumsAdd newAlbums-add"></em>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </li>
+                                        </ul>
+                                </div>
+                            </section>
+                           <div class="box-container newAlbums-action" id="newAlbumsAction">
+                                <!-- <div class="box-container-sub  newAlbums-action-left">
+                                    <span class="newAlbum-allCount-icon"></span>
+                                    <span class="newAlbums-action-allCount">0</span>
+                                </div> -->
+                                <div class="box-container-free newAlbums-action-center">
+                                     <span class="newAlbums-action-allCount">0</span>
+                                    故事累计时长：
+                                    <span class="newAlbums-action-allTime">00:00</span>
+                                </div>
+                                <div class="box-container-sub J_goToAlbumList newAlbums-action-right">
+                                  完成
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="audio-container">
+               <audio id="audio" class="player-audio" src=""  loop="loop" autoplay="autoplay" ></audio>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal-container"></div>
+    
+    <script type="text/javascript" src="mod.js"></script>
+    <script type="text/javascript" src="http://framework7.taobao.org/dist/js/framework7.min.js"></script>
+    <script>var myApp = new Framework7();</script> 
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+
+    <!--SCRIPT_PLACEHOLDER-->
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <script type="text/javascript">
+        require('main');
+    </script>
+    
+</body>
+</html>

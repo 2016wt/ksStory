@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="with-statusbar-overlay">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="凯叔,故事,王凯,宝贝,宝宝,亲子,成长,睡前,哄睡" />
+    <meta name="description" content="凯叔讲故事是国内做大的童年故事品牌。主播王凯，原央视著名主持人，凯叔讲故事创始人。音频内容包含哄睡故事，唤醒故事，日常故事，传统故事，节日故事，西游记，优质绘本故事，0-10岁各年龄段宝宝喜欢的故事应有尽有" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="dns-prefetch" href="//cdn.kaishuhezi.com/">
+	<!-- <link rel="preload" href="/m/page/player.html">
+	<link rel="preload" href="/m/page/tagPage.html">
+	<link rel="preload" href="/m/page/albumPage.html"> -->
+   <!--
+        @require "framework7/framework7.ios.css"
+    -->
+    <!--STYLE_PLACEHOLDER-->
+    <title>凯叔讲故事</title>
+</head>
+<body>
+     <div class="statusbar-overlay"></div>
+     
+	 <div class="views tabs-animated-wrap">
+	 	<div class="tabs">
+		   	<div id="homeView" class="view view-main tab active">
+		        <div class="pages"> <!--  navbar-through -->
+		            <div data-page="home" class="page no-swipeback">
+		                <div data-distance="50" class="page-content pull-to-refresh-content infinite-scroll" id="home-page-content">
+		                	<!-- pull-to-refresh-content --> 
+		                    <div class="pull-to-refresh-layer">
+		                    	<div class="loadpic"><img src="./style/img/loader.gif" alt="加载图"></div>
+		                        <img id="homeShareImg" data-src="./style/img/appico.jpg" alt="" style="display:none;">
+		                    </div>
+		                    <div class="load-result">
+		                    	
+		                    </div>
+		                    <div class="section home-container" id="home-container">
+									<!-- top -->
+									<header class="flex-container container home-head" id="homeHead">
+										<div class="home-left">
+											<a href="#" class="app-download-link  home-feel-icon" data-type="home-touch" data-alisname="摸一摸"></a>
+											<!-- <a href="./page/touch.html?type=touch" class="home-feel-icon"></a> -->
+										</div>
+										<div class="box-container-free home-center">
+											<!-- Search bar -->
+									        <form class="searchbar">
+									            <div class="searchbar-input">
+									                <input readonly type="text" class="J_homeSearch J_collect J_collect_panel open-popup" data-popup=".popup-search" placeholder="凯叔西游记" data-type="search" data-alisname="搜索">
+													<img class="search" src="./style/img/search.png" alt="">
+									               <!--  <a href="#" class="searchbar-clear"></a> -->
+									            </div>
+									            <!-- <a href="#" class="searchbar-cancel i18n" data-i18n="global.cancel"></a> -->
+									        </form>
+								        </div>
+										<div class="home-right J_collect" data-type="home-fret" data-alisname="音柱">
+											<a href="#" class="J_checkPlayLink home-player-icon">
+												<img data-src="./style/img/playing.gif" alt="" width="100%" height="100%" class="J_homePlaying">
+											</a>
+										</div>
+									</header>
+									<!-- homeBanner start -->
+									<div class="bannerbox">
+										<section class="home-banner banner" id="homeBannerView">
+										</section>
+									</div>
+									<!-- homeBanner end -->	
+
+									<!-- home-menu start -->
+									<nav class=" home-menu">
+										
+
+										<a title="最新故事——凯叔讲故事" href="page/tagPage.html?type=nav&id=100002&albumName=最新故事" class="J_menuItem J_collect menu-item" data-type="home-nav" data-alisname="最新故事">
+											<div class="menu-item-icon home-new-icon">
+												<!-- <span class="menu-item-highlight"></span> -->
+												<!-- <i class="home-new-icon"></i> -->
+											</div>
+											<p class="menu-item-text">最新故事</p>
+										</a>
+										<a title="哄睡神器——凯叔讲故事" href="page/tagPage.html?type=tag&id=40815&albumName=哄睡神器&albumCode=first" class="J_menuItem J_collect menu-item active"  data-type="home-nav" data-alisname="哄睡神器">
+											<div class="menu-item-icon home-sleep-icon">
+												<!-- <span class=""></span>
+												<i class="home-sleep-icon"></i> -->
+											</div>
+											<p class="menu-item-text">哄睡神器</p>
+										</a>
+										<a title="凯叔叫早——凯叔讲故事" href="page/tagPage.html?type=tag&id=40820&albumName=凯叔叫早" class="J_menuItem J_collect menu-item" data-type="home-nav" data-alisname="凯叔叫早">
+											<div class="menu-item-icon home-wake-icon">
+												<!-- <span class=""></span>
+												<i class="home-wake-icon"></i> -->
+											</div>
+											<p class="menu-item-text">凯叔叫早</p>
+										</a>
+
+										<!-- <a href="../../page/albums.html" class="J_menuItem menu-item"> -->
+										<a title="全部分类——凯叔讲故事" href="page/catalogue.html" class="J_menuItem J_collect menu-item"  data-type="home-nav" data-alisname="全部分类">
+											<div class="menu-item-icon home-agerankF-icon">
+												<!-- <span class="menu-item-highlight"></span> -->
+												<!-- <i class="home-agerankF-icon"></i> -->
+											</div>
+											<p class="menu-item-text">全部分类</p>
+										</a>
+										
+									</nav>
+									
+									<nav class="home-menu" id="homeMenu">
+										<a title="0-2岁故事——凯叔讲故事" href="page/tagPage.html?type=tag&id=40788&albumName=0~2岁" class="J_menuItem J_collect menu-item active" data-type="home-nav" data-alisname="0~2岁">
+											<div class="menu-item-icon home-agerankO-icon">
+												<!-- <span class="menu-item-highlight"></span> -->
+												<!-- <i class="home-agerankO-icon"></i> -->
+											</div>
+											<p class="menu-item-text">0~2岁</p>
+										</a>
+
+										<a title="3岁以上故事——凯叔讲故事" href="page/tagPage.html?type=tag&id=40703&albumName=3岁+" class="J_menuItem J_collect menu-item" data-type="home-nav" data-alisname="3岁+">
+											<div class="menu-item-icon home-agerankS-icon">
+												<!-- <span class="menu-item-highlight"></span> -->
+												<!-- <i class="home-agerankS-icon"></i> -->
+											</div>
+											<p class="menu-item-text">3岁+</p>
+										</a>
+
+										<a title="6岁以上故事——凯叔讲故事" href="page/tagPage.html?type=tag&id=40728&albumName=6岁+" class="J_menuItem J_collect menu-item" data-type="home-nav" data-alisname="6岁+">
+											<div class="menu-item-icon home-agerankT-icon">
+												<!-- <span class="menu-item-highlight"></span> -->
+												<!-- <i class="home-agerankT-icon"></i> -->
+											</div>
+											<p class="menu-item-text">6岁+</p>
+										</a>
+
+										<a title="新建故事专辑——凯叔讲故事" href="#" class="J_menuItem menu-item app-download-link J_collect newalbum-link" data-alisname="新建专辑" data-type="home-nav">
+											<div class="menu-item-icon home-album-icon" >
+												<!-- <span class="menu-item-highlight"></span> -->
+												<!-- <i class="home-album-icon"></i> -->
+											</div>
+											<p class="menu-item-text">新建专辑</p>
+										</a>
+									</nav>
+
+									
+									<!-- home-menu end -->
+									
+									<!-- 故事部分 -->
+									<input type='hidden' id="isMore" value="">
+									<div class="recommed-storys-view" id="recommedStorysView">
+										<!-- 单个故事 -->
+										<section class="home-recommend">
+											<!-- <p class="home-recommend-title i18n" data-i18n="home.recommend_title"></p> -->
+											<div class="home-recommend-theme">
+												<!-- <div class="home-theme-tag">
+													<span class="tag-text">今日推荐1</span>
+												</div> -->
+												
+											</div>
+											<div class="home-theme-content">
+												<div class="box-container">
+													<div class="box-container-sub box-container-free home-theme-labels">
+														<!-- <span class="label-item">清新</span>
+														<span class="label-item">小公举</span>
+														<span class="label-item">梦幻</span> -->
+														<div class="home-theme-title">
+														<div class="defaultstyle">
+															<div></div>
+
+														</div>
+															
+														</div>
+													</div>
+													<div class="box-container-sub">
+														<!-- <p class="home-theme-time">23:50</p> -->
+													</div>
+												</div>
+												<p class="home-theme-subTitle">
+													<div class="defaultstyle">
+	                                                     <div></div>
+	                                                      <div></div>
+	                                                    
+	                                                </div>
+												</p>
+												<div class="home-theme-playerNumber">
+												<!-- 	<i class="play-count-icon"></i> -->
+													<span class="play-count-text"></span>
+												</div>
+											</div>
+										</section>
+										<section class="home-recommend">
+											<!-- <p class="home-recommend-title i18n" data-i18n="home.recommend_title"></p> -->
+											<div class="home-recommend-theme">
+												
+												<div class="home-theme-playerNumber">
+													<!-- <i class="play-count-icon"></i> -->
+													<span class="play-count-text"></span>
+												</div>
+											</div>
+											<div class="home-theme-content">
+												<div class="box-container">
+													<div class="box-container-sub box-container-free home-theme-labels">
+														<!-- <span class="label-item">清新</span>
+														<span class="label-item">小公举</span>
+														<span class="label-item">梦幻</span> -->
+														<div class="home-theme-title">
+														<div class="defaultstyle">
+															<div></div>
+
+														</div>
+															
+														</div>
+													</div>
+													<div class="box-container-sub">
+														<!-- <p class="home-theme-time">23:50</p> -->
+													</div>
+												</div>
+												<p class="home-theme-subTitle">
+													<div class="defaultstyle">
+	                                                     <div></div>
+	                                                      <div></div>
+	                                                    
+	                                                </div>
+												</p>
+												<div class="home-theme-playerNumber">
+												<!-- 	<i class="play-count-icon"></i> -->
+													<span class="play-count-text"></span>
+												</div>
+											</div>
+										</section>
+										<section class="home-recommend">
+											<!-- <p class="home-recommend-title i18n" data-i18n="home.recommend_title"></p> -->
+											<div class="home-recommend-theme">
+												
+												<div class="home-theme-playerNumber">
+													<!-- <i class="play-count-icon"></i> -->
+													<span class="play-count-text"></span>
+												</div>
+											</div>
+											<div class="home-theme-content">
+												<div class="box-container">
+													<div class="box-container-sub box-container-free home-theme-labels">
+														<!-- <span class="label-item">清新</span>
+														<span class="label-item">小公举</span>
+														<span class="label-item">梦幻</span> -->
+														<div class="home-theme-title">
+														<div class="defaultstyle">
+															<div></div>
+
+														</div>
+															
+														</div>
+													</div>
+													<div class="box-container-sub">
+														<!-- <p class="home-theme-time">23:50</p> -->
+													</div>
+												</div>
+												<p class="home-theme-subTitle">
+													<div class="defaultstyle">
+	                                                     <div></div>
+	                                                      <div></div>
+	                                                    
+	                                                </div>
+												</p>
+												<div class="home-theme-playerNumber">
+												<!-- 	<i class="play-count-icon"></i> -->
+													<span class="play-count-text"></span>
+												</div>
+											</div>
+										</section>
+									</div>
+<div class="notMore box-container box-center">
+											<!-- <img  class="loadpic" src="./style/img/load.gif" alt=""><span>加载中...</span> -->
+											没有更多了...
+										</div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+	    	
+	    	</div>
+			<div id="taskView" class="view tab">
+		        <div class="navbar">
+		            <div class="navbar-inner">
+		                <div class="center sliding">凯叔任务</div>
+		            </div>
+		        </div>
+		        <div class="pages navbar-through">
+		            <div data-page="task" class="page contact-page">
+		                <!-- <div class="page-content">
+		                    凯叔任务内容区域
+		                </div> -->
+		            </div>
+		        </div>
+	    	</div>
+			<div id="settingView" class="view tab">		       
+		         <div class="pages">
+			            <div data-page="setting" class="page contact-page">
+			                    <div class="albumNav">
+			                        <div class="albumNav-inner box-container">
+			                           <div class="albumNav-left box-container-sub flex-container-vertical">
+			            					<a href="#"  class="external user-email-icon app-download-link" >
+			            						<span>2</span>
+			            					</a>
+			                           </div>
+			                            <div class="box-container-free albumNav-center  newAlbumsNavName flex-container-vertical">我的</div>
+			                           
+			                           <!--  <div class="albumNav-right box-container-sub flex-container-vertical">
+			                           		  <a href="#" class="J_checkPlayLink user-player-icon">
+												<img data-src="./style/img/playing.gif?__inline" alt="" width="100%" height="100%" class="J_homePlaying">
+											  </a>
+			                            </div> -->
+			                        </div>		            
+			                    </div>
+			                <div class="page-content settingView-content">
+			                    <div class="section setting-container">
+			                    	<section class="imgsbox">
+			                    		<dl>
+			                    			<dt><a href="#" class="headphoto"></a></dt>
+			                    			<dd style="display:none;"><span>张啊啊啊啊啊</span><a href="./page/user-editor.html" class="editor"></a></dd>
+			                    			<dd style="display:none;"><span class="sex"></span><i>2010-1-3</i></dd>
+			                    		</dl>
+			                    	</section>
+			                    	<section class="setting-list">
+			                    		
+			                    		<div class="list-block">
+					                      <ul class="list">
+					                        
+					                        <li style="display:none;">
+					                          <a href="./page/myalbum.html?name=myalbum" class="item-link item-content open-info">
+					                           
+					                            <div class="item-inner">
+					                              <div class="item-title"><i class="icon"></i>我的专辑</div>
+					                              <div class="item-after"><span class="num changenum_ablum"></span></div>
+					                            </div>
+					                          </a>
+					                        </li>
+					                        <li style="display:none;">
+					                          <a href="./page/listen.html" class="item-link item-content open-info">
+					                          
+					                            <div class="item-inner">
+					                              <div class="item-title"><i class="icon"></i>我听过的</div>
+					                              <div class="item-after">
+					                              <span class="num changemun_listen"></span>
+					                                 
+					                              </div>
+					                            </div>
+					                          </a>
+					                        </li> <li style="display:none;" >
+					                          <a href="./page/mycollect.html" class="item-link item-content open-info">
+					                          
+					                            <div class="item-inner">
+					                              <div class="item-title"><i class="icon"></i>我喜欢的</div>
+					                              <div class="item-after">
+					                              <span class="num changenum_love"></span>
+					                              </div>
+					                            </div>
+					                          </a>
+					                        </li>
+					                        <li style="display:none;">
+					                          <a href="./page/myload.html" class="item-link item-content open-info">
+					                          
+					                            <div class="item-inner">
+					                              <div class="item-title"><i class="icon"></i>我下载的</div>
+					                              <div class="item-after">
+					                              <span class="num changenum"></span>
+					                              </div>
+					                            </div>
+					                          </a>
+					                        </li> 
+					                        <li>
+					                          <a href="#" class="item-link item-content open-info">
+					                          
+					                            <div class="item-inner">
+					                              <div class="item-title"><i class="icon"></i>在线客服</div>
+					                              <div class="item-after">
+					                              <span class="num changenum"></span>
+					                              </div>
+					                            </div>
+					                          </a>
+					                        </li>
+
+					                         <li>
+					                          <a href="page/recentedition.html" class="item-link item-content open-info">
+					                          
+					                            <div class="item-inner">
+					                              <div class="item-title"><i class="icon"></i>当前版本</div>
+					                              <div class="item-after">
+					                              <span class="num changenum"></span>
+					                              </div>
+					                            </div>
+					                          </a>
+					                        </li>
+
+
+					                      </ul>
+	                      				</div>
+			                    	</section>
+			                    	<section class="endbtn" style="">
+			                    		<p class="endadmin" style="display:none;">退出登录</p>
+			                    	</section>
+			                    	
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+	        </div>
+
+		</div>
+		<!-- toolbar start 工具栏 -->
+	    <!-- <div class="toolbar tabbar tabbar-labels">
+	        <div class="toolbar-inner">
+	            <a href="#homeView" class="tab-link active">
+	                <i class="icon listen-icon" data-clazz="listen-on-icon"></i>
+	                <span class="tabbar-label i18n" data-i18n="index.story"></span>
+	            </a>
+	
+	           <a href="#taskView" class="tab-link">
+	                <i class="icon task-icon" data-clazz="task-on-icon"></i>
+	                <span class="tabbar-label i18n" data-i18n="index.task"></span>
+	            </a>
+	            <a href="#settingView" class="tab-link">
+	                <i class="icon my-icon" data-clazz="my-on-icon">
+	                </i>
+	                <span class="tabbar-label i18n" data-i18n="index.setting"></span>
+	            </a>
+	        </div>
+	    </div> -->
+    	<!-- toolbar end -->
+	   <div id="audio-container">
+<!-- 	   	<audio id="audio" class="player-audio" src=""  loop="loop" autoplay="autoplay" ></audio>
+-->	   	    <audio id="audio" class="player-audio" preload="auto">
+	    	
+	    <!-- <source src=”″ /> -->
+			</audio>
+	   </div>
+	 </div>
+	 <div id="modal-container">
+	 	 
+	 </div>
+	<!-- <div class="mask">
+		<div class="loadalert">
+			<img class="load" src="./style/img/loadpic.gif?__inline" alt="" >
+		</div>	
+	</div> -->
+	<div class="preloader-indicator-overlay" ></div>
+	<div class="preloader-indicator-modal">
+		<span class="preloader preloader-white"></span>
+	</div>
+	<div id="guideDownloadModellead">
+		<div class="mask_layer_1" >
+
+			
+		</div>
+		<!-- 弹出的窗口 -->
+		<div id="guideDownloadModel">
+				<div class="guide-download-model">
+					<div class="guide-download-pic">
+						<div class="guide-download-img">
+							<img src="./style/img/guide-pic_1x.png" alt="">
+						</div>
+						<div class="guide-download-cancel">
+							<div class="guide-cancel-icon J_guideCancelModel">
+							</div>
+						</div>
+					</div>
+					<div class="J_downText guide-download-word">
+						
+
+					</div>
+					<div class="guide-download-button">
+						<div class="J_downloadLink guide-download-btncon">
+							下载凯叔讲故事APP
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+    <script type="text/javascript" src="mod.js"></script>
+    <!-- <script src="http://s11.cnzz.com/z_stat.php?id=1259274367&web_id=1259274367" language="JavaScript"></script> -->
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+
+	<!--SCRIPT_PLACEHOLDER-->
+	<!--RESOURCEMAP_PLACEHOLDER-->
+
+	<script type="text/javascript">
+	    require('main');
+	</script>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?1db2f66ca5491f4e2727cc242a2f5535";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+ 	</script>
+	
+</body>
+</html>

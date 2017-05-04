@@ -1,0 +1,11 @@
+{{#hotSearchList}}
+<li>
+	<p class="hotmain-record">{{name}}</p>
+	<div class="hotmain-record-con">
+		{{#each taglist}}
+		<a class="J_collect hotmain-record-con-a" href="page/tagPage.html?type=tag&id={{tagid}}&albumName={{tagname}}" data-type="catalogue-tag" data-alisname="{{tagname}}">
+		{{tagname}}</a>
+		{{/each}}
+	</div>
+</li>
+{{/hotSearchList}}

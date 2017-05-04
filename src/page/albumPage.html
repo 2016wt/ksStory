@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>专辑</title>
+    <!--
+        @require "framework7/framework7.ios.css"
+    -->
+    <!--STYLE_PLACEHOLDER-->
+  </head>
+  <body>
+    <div class="views">
+      <div class="view view-main">
+        <div class="pages">
+          <div data-page="albumPage" class="page albumPage" id="albumOnlyPage">
+            <div class="albumNav" id="albumNavbar">
+                  <div class="albumNav-inner box-container">
+                      <div class="albumNav-left">
+                          <a href="#" class="back back2contact link text-navbar">
+                              <img src="./style/img/newback_1x.png?__inline" width="13" height="21" alt="">
+                          </a>
+                      </div>
+                      <div class="J_albumPageTitle J_albumPageTitleTwo J_pageTitle box-container-free albumNav-center flex-container-vertical"></div>
+                      <div class="albumNav-right box-container-sub flex-container-vertical">
+                          <a class="J_rightLink external albumNav-right-a app-download-link"  data-href="page/appDownload.html" href="#" data-type="albumPage-share-icon" data-alisname="分享"><img src="./style/img/Rollout_1x.png?__inline" width="21" height="19" alt=""></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="page-content infinite-scroll box-container-free albumPageBox" id="albumSingleView">
+                <!--  <div class="J_allplay allplay contentTop" style="display:none;"> -->
+                <div class="allplay contentTop">
+                    <span class="left">
+                      <div>
+                      <i>6</i>个故事</div>
+                    </span>
+                    <div data-href="page/appDownload.html" class="right app-download-link" data-type="albumPage-alldown" data-alisname="全部下载">
+                      <div>
+                      <span class="playbtn"></span>新建哄睡专辑</div>
+                    </div>
+                </div>
+               <input type='hidden' id="isMore" value="">
+                 <div class="list-block sortable " id="homealbumslist">
+                      <ul class="J_albumPageList albumOnlyPagelist" id="albumPagelist" data-more='false'>
+                          <!-- <li class="default-style">
+                             <img src="./style/img/loader.gif" alt="" width="20" height="20">
+                             <p>加载中...</p>
+                          </li> -->
+
+                      </ul>
+                      <div class="notMore box-container box-center">
+                      没有更多了...
+                       <!--  <img  class="loadpic" src="./style/img/load.gif" alt=""><span>加载中...</span> -->
+                      </div>
+                       
+                 </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div id="audio-container">
+           <audio id="audio" class="player-audio" autoplay="autoplay"></audio>
+        </div>
+  <div id="modal-container">
+  </div>
+ <!--  <div class="mask">
+    <div class="loadalert">
+      <img class="load" src="./style/img/loadpic.gif?__inline" alt="" >
+    </div>  
+  </div> -->
+  <div class="preloader-indicator-overlay"></div>
+  <div class="preloader-indicator-modal">
+    <span class="preloader preloader-white"></span>
+  </div>
+  <div id="guideDownloadModellead">
+      <div class="mask_layer_1">
+      </div>
+      <!-- 弹出的窗口 -->
+      <div id="guideDownloadModel">
+          <div class="guide-download-model">
+            <div class="guide-download-pic">
+              <div class="guide-download-img">
+                <img src="./style/img/guide-pic_1x.png" alt="">
+              </div>
+              <div class="guide-download-cancel">
+                <div class="guide-cancel-icon J_guideCancelModel">
+                </div>
+              </div>
+            </div>
+            <div class="J_downText guide-download-word">
+
+            </div>
+            <div class="guide-download-button">
+              <div class="J_downloadLink guide-download-btncon">
+              下载凯叔讲故事APP
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+    <script type="text/javascript" src="mod.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    <!--SCRIPT_PLACEHOLDER-->
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <script type="text/javascript">
+        require('main');
+    </script>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?1db2f66ca5491f4e2727cc242a2f5535";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+  </body>
+</html>      

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="with-statusbar-overlay">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--
+        @require "framework7/framework7.ios.css"
+    -->
+
+    <!--STYLE_PLACEHOLDER-->
+    <title>凯叔讲故事－登录宝宝信息页</title>
+</head>
+<body>
+     <div class="statusbar-overlay"></div>
+     <div class="views toolbar-through">
+            <div class="view view-main"> 
+                <div class="navbar" id="loginSexSubmitNavbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="back back2contact link text-navbar login-navLeft">
+                                <img src="./style/img/back.png" width="24" height="24" alt="">
+                            </a>
+                        </div>
+                        <div class="center sliding">宝宝信息</div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+           
+
+                <div class="pages">
+                    <div data-page="loginsexsubmit" class="page no-toolbar toolbar-fixed">
+
+                        <div class="page-content">
+                            <div class="login">
+                                <div class="login-content login-main" id="loginSexSubmitView">
+                                    <section class="login-main－banner login-baby-submit box-container-sub">
+                                        <div class="box-container">
+                                            <div class="login-banner-baby-theme box-container-free flex-center">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="box-container">
+                                            <div class="box-container-free flex-center">
+                                                <div class="login-banner-baby-icon" id ="loginSexSubmitBabyIcon">
+                                                    <img src="./style/img/boy_1x.png" alt="">
+                                                </div>
+                                            </div>
+                                         </div>
+                                    </section>
+
+                                    <section class="login-main-content login-submit-content box-container-sub">
+                                        <div class="box-container flex-center">
+                                            <div class="login-submit-content-bornData">
+                                                <!-- <span>2016</span>-<i>2</i>-<em>15</em> -->
+                                                <input id="babyboth"  class="login-submit-data" type="date"/>
+                                            </div>
+                                        </div>
+                                        <div class="box-container">
+                                            <div class="login-submit-content-complete J_babySubmit">
+                                                完成
+                                            </div>
+                                        </div>
+                                    </section>
+                                   
+                                </div>
+                            </div>
+                        
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div id="audio-container">
+           <audio id="audio" class="player-audio" src=""  loop="loop" autoplay="autoplay" ></audio>
+        </div>        
+     </div>
+    <div id="modal-container"></div>
+    <script type="text/javascript" src="mod.js"></script>
+    <!--<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>-->
+    
+    <!--SCRIPT_PLACEHOLDER-->
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <script type="text/javascript">
+        require('main');
+    </script>
+    
+
+</body>
+</html>

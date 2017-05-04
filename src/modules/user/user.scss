@@ -1,0 +1,533 @@
+@import "../../style/scss/mixins";
+i{font-style:normal;}
+
+
+//----------我的首页--------------------------------
+#settingView{
+		//height:100%;
+		//position: relative;
+		overflow-y:scroll;
+		background:#fff;
+		.navbar {
+		    background-color: #83cd70 !important;
+		}
+		.navbar-on-center{background-color: #83cd70 !important;}
+		.navbar:after{
+			height:0;
+		}
+		.user-email-icon{
+			width:24px;
+			height:22px;
+		    display:block;
+			background:url(../../style/img/email.png?__sprite);
+			position:relative;
+			span{
+				width:16px;
+				height:16px;
+				position:absolute;
+				text-align:center;
+				line-height:16px;
+				color:#fff;
+				right:-6px;top:-3px;
+				@include border-radius(8px);
+				background:#ff595c;
+				font-size:$user-email-icon;
+			}
+		}
+		.user-player-icon{
+			width:30px;
+			height:30px;
+		    margin: 8px auto;	
+		    display:block;
+
+			background:url(../../style/img/home_play_1x.png?__sprite);
+			img{
+				display:none;
+			}
+		}
+		.settingView-content{
+			padding-top: 0;
+		}
+		.imgsbox{
+			height:150px;
+			background:#83cd70;
+			padding-top:10px;
+			dl{
+				 margin:0 auto;
+				 width:164px;
+				 text-align:center;
+
+				 dt{
+			 		width:68px;
+			 		height:68px;
+			 		margin:10px auto;
+			 		background:#fff;
+			 		@include border-radius(34px);
+			 		position:relative;
+			 		opacity:0.9;
+					.headphoto{
+					 	width:64px;
+					 	height:64px;
+					 	display:block;
+					 	background:#000;
+					 	background:url(../../style/img/login_icon.png);
+					 	background-size: 100% auto;
+					 	border-radius:32px;
+					 	@include border-radius(32px);
+					 	position:absolute;left:2px;top:2px;
+					}
+
+				 }
+				 dd{
+				 	font-size:$imgsbox;
+				 	color:#fff;
+				 	line-height:24px;
+				 	margin:0 auto;
+				 	i{font-style:normal;}
+				 	.sex{
+				 		width:15px;
+				 		height:17px;
+				 		display:inline-block;
+				 		background:url(../../style/img/ss.png);
+						background-size:100% 100%;
+				 		margin-right:8px;
+
+				 	}
+				 	.editor{
+				 		width:14px;
+				 		height:13px;
+				 		display:inline-block;
+				 		background:url(../../style/img/edit_1x.png);
+				 		background-size:100% 100%;
+				 		margin-left:8px;
+				 	}
+				 }
+			 
+			}
+		}
+
+		.setting-list .list-block{
+			margin:0;
+			.item-title{padding-left:15px;}
+			.item-content {
+				padding:0;
+				.item-inner{padding:0;}
+			}
+		}
+
+		.list{
+			background:#fff;
+			
+			li .icon{
+				width:22px;
+			 	height:22px;
+			 	display:inline-block;
+			 	overflow:hidden;
+			 	vertical-align:middle;
+			 	margin-right:10px;
+			}
+			color:#8f8f8f;
+			li{
+
+			 &:nth-of-type(1) i{
+			 	background:url(../../style/img/album_1x.png?__sprite) no-repeat ;
+				
+			 }
+			 &:nth-of-type(2) i{
+			 	
+			 	background:url(../../style/img/love.png?__sprite) no-repeat;
+			 	
+			 }
+
+			 &:nth-of-type(3) i{
+			 	background:url(../../style/img/wake.png?__sprite) no-repeat;
+			 	
+			 }
+			 &:nth-of-type(4) i{
+			 	background:url(../../style/img/load.png?__sprite) no-repeat;
+			 	
+			 }
+			 &:nth-of-type(5) i{
+			 	background:url(../../style/img/smile.png?__sprite) no-repeat;
+			 	
+			 }
+			 &:nth-of-type(6) i{
+			 	background:url(../../style/img/ts.png?__sprite) no-repeat;
+			 	
+			 }
+			 &:nth-of-type(4){border-bottom:5px solid #f0f0f0;}
+			 .item-inner:after{background:none}
+
+			}
+			li{
+			 height:50px;
+			 line-height:50px;
+			 font-size:$list;
+			 position:relative;
+			 border-bottom:1px solid #e5e5e5;
+			 p{display:inline-block;position:absolute;
+			 	right:18px;top:0px;color:#999999;}
+			 	.num{position:absolute;right:30px;top:0px;}
+
+			}
+		}
+		.endbtn{
+			background:#fff;padding:50px 0 200px 0;
+			.endadmin{
+				width:251px;
+				height:36px;
+				text-align:center;
+				margin:0 auto;
+				@include border-radius(2px);
+				line-height:36px;
+				background:#bcbcbc;
+				color:#fff;
+				
+			}
+		}
+}
+//.user-editor.html------------------------- 我的编辑页-----------------------
+.editor{
+	.editor-content{
+		.item-content{padding:0;text-indent:15px;}
+		.list-block{
+			font-size:$editor-content;
+			ul{margin-top:-36px;}
+		}
+
+	}
+	.editor-content li{
+		position:relative;
+		.name,.dateopt,.sexopt{
+			
+			width:100%;
+			height:44px;
+			position:absolute;
+			left:0px;top:0;
+			padding-left:220px;
+			font-size:$editor-content;
+			color:#8e8e93;
+
+			
+		}
+		.sexopt{padding-left:260px;}
+		.dateopt{}
+		a{padding:0;}
+		.changesex,.changedate{
+		
+		i,em{font-style:normal;}
+		}
+	}
+
+}
+
+
+//listen.html --------------------------我听过页------------------------
+.listen{
+
+	.item-media{
+		img{
+			background:url(../../style/img/loadpic@2x.png) no-repeat center center;
+			background-size: 50% auto;
+		}
+	}
+	.allplay{
+		height:40px;
+		background:#f2f2f2;
+		text-align:center;
+		//margin-top:44px;
+		line-height:40px;
+		display: -webkit-box;
+		-webkit-box-align:center;
+		-webkit-box-pack:center;
+		span{
+			display: block;
+		}
+	}
+	.playbtn{
+		width:9px;
+		height:10px;
+		display:inline-block;
+		background:url(../../style/img/playbtn.png);
+		background-size:100% 100%;
+		margin-right:9px;
+	}
+	.list-block{
+		li{border-bottom:1px solid #e5e5e5;}
+		margin:0;
+		.item-inner:after{
+			//background-color:none; 
+			display: none;
+		}
+	}
+
+}
+//recentedition.html----------------当前版本页-------------------------------
+.edition{
+	.versionnum{  //???////////////////////
+	dl{width:80px;}
+	width:80px;
+	margin:0 auto;
+	padding:34px 0 30px 0;
+
+	dd{width:80px;margin:0 auto;text-align:center;}
+	dt{
+		width:80px;
+		height:80px;
+		border-radius:8px;
+		//background:#83cd70;
+		margin:0 auto;
+		margin-bottom:10px;
+		img{width:100%;height: 100%;display: block;}
+	}
+
+	}
+	.storyintroduce{
+	padding:0 20px;
+	text-indent:24px;
+		
+	}
+	.updatever{
+		width:250px;
+		height:37px;
+		display:block;
+		border-radius:2px;
+		text-align:center;
+		line-height:37px;
+		color:#fff;
+		background:#83cd70;
+		margin:50px auto 0 auto;
+	}
+
+}
+
+
+//mycollect.html --------------------我喜欢页--------------------------------------
+.mycollect{
+	.mycollect_nav{top:0!important;}
+	.item-media img{
+		background:url(../../style/img/loadpic@2x.png) no-repeat center center;
+		background-size: 50% auto;
+		border:none!important;
+
+	}
+	.menus-row{
+		.active{	
+			border-bottom:1px solid #83cd70;
+		}
+		.menu{
+			width:50%;
+			height:44px;
+			line-height:44px;
+			display:inline-block;
+			text-align:center;
+			
+		
+		}
+
+	}
+	.allplay{
+		height:40px;
+		background:#f2f2f2;
+		text-align:center;
+		margin-top:-45px;
+		line-height:40px;
+		display: -webkit-box;
+		-webkit-box-align:center;
+		-webkit-box-pack:center;
+		span{
+			display: block;
+		}
+	}
+	.list-block{margin:0;}
+	#tab2{
+		margin-top:-45px;
+	}
+	.item-content{
+		i{
+			width:20px;
+			height:20px;
+			margin-left:20px;
+			display:inline-block;
+		}
+		.player-download-icon{
+    		background:url(../../style/img/down_1x.png) center center;
+    		background-size: 100% 100%;
+   		 }
+	}
+	
+	.playbtn{
+		width:9px;
+		height:10px;
+		display:inline-block;
+		background:url(../../style/img/playbtn.png);
+		background-size:100% 100%;
+		margin-right:9px;
+	}
+	.albumlist li{border-bottom:1px solid #e5e5e5;}
+	.albumlist:before{display: none;}
+	.albumlist:after{display: none;}
+	.item-inner:after{display: none;}
+	.tabs{
+		
+		.content-block{padding:0;}
+		.empty{margin-top:103px;}
+		.content-block{
+			width:150px;
+			margin:108px auto;
+			text-align:center;
+			p{margin-bottom:14px;}
+			.more{
+				width:150px;
+				height:32px;
+				background:#e6e6e6;
+				text-align:center;
+				line-height:32px;
+				
+			}
+		}
+	}	
+}
+
+	
+//myalbum.html-------------------我的专辑页----------------------------------
+.myalbum{
+	.myalbum-content{
+		padding-top:0;
+		.album-num{padding-right: 4px;}
+		.item-media{
+		img{
+			background:url(../../style/img/loadpic@2x.png) no-repeat center center;
+			background-size: 50% auto;
+		}
+		}
+		.album_add{
+			width:12px;
+			height:12px;
+			
+			background:url(../../style/img/add_albums_2x.png);
+			background-size:100% 100%;
+			margin-right:9px;
+
+		}
+		.allplay{
+			height:40px;
+			background:#f2f2f2;
+			text-align:center;
+			display: -webkit-box;
+			-webkit-box-align:center;
+			-webkit-box-pack:center;
+			span{
+				display: block;
+			}
+			.album_add{
+				width:18px;
+				height:18px;
+				display:block;
+				background:url(../../style/img/add_albums_1x.png);
+				background-size:100% 100%;
+				margin-right:9px;
+			}
+		}
+		.list-block{margin:0;}
+		
+	}
+	
+	
+}
+
+//myload.html --------------------我的下载页--------------------------------------
+.myload{
+	.myload_nav{top:0!important;}
+	.item-media img{
+		background:url(../../style/img/loadpic@2x.png) no-repeat center center;
+		background-size: 50% auto;
+		border:none!important;
+
+	}
+	.menus-row{
+		position: relative;
+		.border_bg{	
+			width:25px;
+			height:2px;
+			background: #83cd70;
+			position: absolute;
+			left:20%;bottom:0;
+		}
+		.menu{
+			width:50%;
+			height:44px;
+			line-height:44px;
+			display:inline-block;
+			text-align:center;
+			
+		
+		}
+
+	}
+	.allplay{
+		height:40px;
+		background:#f2f2f2;
+		text-align:center;
+		margin-top:-45px;
+		line-height:40px;
+		display: -webkit-box;
+		-webkit-box-align:center;
+		-webkit-box-pack:center;
+		span{
+			display: block;
+		}
+	}
+	.list-block{margin-top:-44px;}
+	#tab2{
+		margin-top:-45px;
+	}
+	.item-content{
+		i{
+			width:20px;
+			height:20px;
+			margin-left:20px;
+			display:inline-block;
+		}
+		.player-download-icon{
+    		background:url(../../style/img/down_1x.png) center center;
+    		background-size: 100% 100%;
+   		 }
+	}
+	
+	.playbtn{
+		width:9px;
+		height:10px;
+		display:inline-block;
+		background:url(../../style/img/playbtn.png);
+		background-size:100% 100%;
+		margin-right:9px;
+	}
+	.albumlist li{border-bottom:1px solid #e5e5e5;}
+	.albumlist:before{display: none;}
+	.albumlist:after{display: none;}
+	.item-inner:after{display: none;}
+	.tabs{
+		
+		.content-block{padding:0;}
+		.empty{margin-top:103px;}
+		.content-block{
+			width:150px;
+			margin:108px auto;
+			text-align:center;
+			p{margin-bottom:14px;}
+			.more{
+				width:150px;
+				height:32px;
+				background:#e6e6e6;
+				text-align:center;
+				line-height:32px;
+				
+			}
+		}
+	}	
+}
+
+
+
+

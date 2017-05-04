@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="with-statusbar-overlay">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--
+        @require "framework7/framework7.ios.css"
+    -->
+
+    <!--STYLE_PLACEHOLDER-->
+    <title>凯叔讲故事</title>
+</head>
+<body>
+   <div class="views">
+    <div class="view view-main">
+       <div class="pages navbar-through">
+          <!-- Pag has additional "with-subnavbar" class -->
+          <div data-page="mycollect" class="page with-subnavbar">
+          <div class="section mycollect" >
+          <div class="navbar">
+                <div class="navbar-inner">
+                  <div class="left">
+                     <a href="" class="back back2contact link text-navbar">
+                        <img src="./style/img/newback_1x.png" width="13" height="21" alt="">
+                    </a>
+                  </div>
+                  <div class="center">我的收藏</div>
+                  <div class="right"></div>
+                 
+                </div>
+              </div>
+            <div class="page-content hide-bars-on-scroll">
+
+             
+             <!-- Sub navbar -->
+            <div class="subnavbar mycollect_nav">
+              <div class="buttons-row menus-row"> 
+                <a href="#tab1" class="tab-link active menu">故事（<span class="story_count"></span>）</a>
+                <a href="#tab2" class="tab-link menu">专辑（<span class="ablum_count"></span>）</a>
+                
+              </div>
+            </div>
+              <div class="tabs">
+              <!--  <div id="tab3" class="empty">
+                  <div class="content-block">
+                   <p>还没有故事</p>
+                   <div class="more">去全部故事听更多</div> 
+                </div> -->
+               <div id="tab1" class="tab active">
+                 <!--  <div class="content-block">
+                     <p>还没有故事</p>
+                   <div class="more">去全部故事听更多</div> 
+                  </div> -->
+                  <div class="collect-content">
+                     <div class="allplay"><span class="playbtn"></span>全部播放</div>
+
+                      
+                    <div class="list-block">
+                        <ul class="albumlist" id="Collectstorylist">
+                          <li class="swipeout">
+                           <div class="swipeout-content item-content">
+                              <div class="item-media"><img src="" alt="" width="35" height="35"></div>
+                              <div class="item-inner">
+                                <div class="item-title">白雪公主</div>
+                                <div class="item-after">
+                                   <span><i class="J_playerAddAlbums player-download-icon"></i></span>
+                                </div>
+                              </div>
+
+                          </div>
+                              <div class="swipeout-actions-right">
+                                  <a href="#" class="swipeout-delete">删除</a>
+                              </div>
+                           
+                          </li>
+                        
+                         
+                        </ul>
+                      
+                      </div>
+                        
+                  </div>
+                </div>
+                <div id="tab2" class="tab">
+                 <!--  <div class="content-block">
+                      <p>还没有故事</p>
+                   <div class="more">去全部故事听更多</div> 
+                  </div> -->
+                  <div class="collect-content">
+                    
+                    <div class="list-block">
+                        <ul class="albumlist" >
+                          <li>
+                            <a href="#" class="item-link item-content">
+                              <div class="item-media"><img src="" alt="" width="35" height="35"></div>
+                              <div class="item-inner">
+                                <div class="item-title">白雪公主</div>
+                                <div class="item-after"></div>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="item-link item-content">
+                              <div class="item-media"><img src="" alt="" width="35" height="35"></div>
+                              <div class="item-inner">
+                                <div class="item-title">小矮人</div>
+                                <div class="item-after"></div>
+                              </div>
+                            </a>
+                          </li>
+                         
+                        </ul>
+                      
+                      </div>
+                        
+                  </div>
+                </div>
+             
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div> 
+    <script type="text/javascript" src="mod.js"></script>
+
+    <!-- Path to Framework7 Library JS-->
+
+    <script type="text/javascript" src="http://framework7.taobao.org/dist/js/framework7.min.js"></script>
+
+    <script type="text/javascript">
+      var myApp = new Framework7();
+      var $$ = Framework7.$;
+      var mainView = myApp.addView('.view-main', {
+      });
+    </script>
+    <!--SCRIPT_PLACEHOLDER-->
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <script type="text/javascript">
+        require('main');
+    </script>
+  </body>
+</html>      

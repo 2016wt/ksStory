@@ -1,0 +1,7 @@
+{
+    "repos": "https://github.com/nolimits4web/Framework7",
+    "version": "v1.2.0",
+    "description": "Full Featured HTML Framework For Building iOS Apps http://www.idangero.us/framework7/",
+    "name": "framework7",
+    "main": "framework7.js"
+}

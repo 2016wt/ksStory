@@ -1,0 +1,28 @@
+
+ {{#storyList}}
+
+  <li class="hotsearch-list-ev  box-container">
+    <div class ="J_goCurrentPlayer box-container-free hotsearch-list-ev-center box-container">
+
+        <a class="hotsearch-icon box-container-sub" data-href="{{../HOST}}/page/player.html?type={{../type}}&typeId={{../typeId}}&storyId={{storyid}}&storyName={{storyname}}&albumName={{../albumName}}" href="#">
+          <span class ="hotsearch-name-icon">
+            <img src="{{iconurl}}" alt="">
+          </span>
+        </a>
+        <a  class="box-container-free centertxt" data-href="{{../HOST}}/page/player.html?type={{../type}}&typeId={{../typeId}}&storyId={{storyid}}&storyName={{storyname}}&albumName={{../albumName}}" href="#">
+           <div class="hotsearch-name box-container-free flex-vertical"><span>{{storyname}}</span></div>
+           <div class="hotsearch-detail">
+              <div class="detail-number"><i></i><span>{{../playCount}}</span></div>
+              <div class="detail-often"><i></i><span>{{timetext}}</span></div>
+           </div>
+        </a>
+          <!-- <span  data-href="{{../HOST}}/page/appDownload.html" href="#" class="app-download-link external box-container-sub hotsearch-tip  flex-container-vertical link ">
+                <i class="hotsearch-tip-icon"></i>
+          </span>-->
+          <span  data-href="{{../HOST}}/page/appDownload.html" href="#"  class="app-download-link external  box-container-sub hotsearch-tip flex-container-vertical link downapp-link" data-type="albumPage-down" data-alisname="下载">
+            <i class="hotsearch-load-icon"></i>
+          </span>
+    </div>
+  </li>
+
+{{/storyList}}

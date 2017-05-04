@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="with-statusbar-overlay">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--
+        @require "framework7/framework7.ios.css"
+    -->
+
+    <!--STYLE_PLACEHOLDER-->
+    <title>凯叔讲故事</title>
+</head>
+<body>
+     <div class="statusbar-overlay"></div>
+     <div class="views toolbar-through">
+        <div class="view view-main">
+            <div class="pages">
+                 <div data-page="recentedition" class="page no-toolbar toolbar-fixed">
+                   <div class="section edition">
+                      <div class="navbar" id="editionNavbar">
+                          <div class="navbar-inner">
+                              <div class="left">
+                                  <a href="" class="back back2contact link text-navbar">
+                                      <img src="./style/img/back.png" width="24" height="24" alt="">
+                                  </a>
+                              </div>
+                              <div class="center chat-name sliding">当前版本</div>
+                              
+                          </div>
+                      </div>
+                      <div class="edition-content infinite-scroll">
+                        <div class="versionnum">
+                          <dl>
+                            <dt><img src="../style/img/starticon.png" alt=""></dt>
+                            <dd>凯叔讲故事</dd>
+                            <dd>v1.0.0</dd>
+                          </dl>
+                        </div>
+                        <div class="storyintroduce">
+                          凯叔讲故事的介绍都在这里哦凯叔讲故事的介绍都在这里哦凯叔讲故事的介绍都在这里哦凯叔讲故事的介绍都在这里哦凯叔讲故事的介绍都在这里哦凯叔讲故事的介绍都在这里哦凯叔讲故事的介绍都在这里哦凯叔讲故事的介绍都在这里哦凯叔讲故事的介绍都在这里哦凯叔讲故事的介绍都在这里哦凯叔讲故事的介绍都在这里哦
+                        </div>
+                        <span class="updatever">更新版本</span>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div id="audio-container">
+           <audio id="audio" class="listen-audio" src=""  loop="loop" autoplay="autoplay" ></audio>
+        </div>        
+     </div>
+    <div id="modal-container"></div>
+    <script type="text/javascript" src="mod.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    
+    <!--SCRIPT_PLACEHOLDER-->
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <script type="text/javascript">
+        require('main');
+    </script>
+    
+
+</body>
+</html>

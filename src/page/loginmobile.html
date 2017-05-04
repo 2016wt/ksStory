@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="with-statusbar-overlay">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--
+        @require "framework7/framework7.ios.css"
+    -->
+
+    <!--STYLE_PLACEHOLDER-->
+    <title>凯叔讲故事-登录用户选择手机登录页</title>
+</head>
+<body>
+     <div class="statusbar-overlay"></div>
+     <div class="views toolbar-through">
+        <div class="view view-main">
+            <div class="navbar" id="loginMobileNavbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="back back2contact link text-navbar login-navLeft">
+                            <img src="./style/img/back.png" width="24" height="24" alt="">
+                        </a>
+                    </div>
+                    <div class="center sliding">登录</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="pages">
+                 <div data-page="loginmobile" class="page no-toolbar toolbar-fixed">
+                    
+                    <div class="page-content">
+                        <div class="login">
+                            <div class="login-content login-main" id="loginMobileView">
+                                <section class="login-main-banner box-container-sub flex-center">
+                                    <div class="login-banner-con">
+                                        <img src="./style/img/login_icon.png" alt="">
+                                    </div>
+                                    <!--输入错误弹出模块-->
+                                    <div class="login-banner-prompt box-container">
+                                        <i class="box-container  box-container-sub flex-container-vertical">
+                                            <em></em>
+                                        </i>
+                                        <span class="box-container-free login-prompt-span box-container"></span>
+                                    </div>
+                                    
+                                </section>
+
+                                <section class="login-main-content box-container-sub" id="formAction">
+                                    <form action="" method="POST" class="ajax-submit">
+                                        
+                                        <div class="login-account">
+                                            <label for="loginAccount">
+                                                <div class="login-account-icon"></div>
+                                            </label>
+                                            <input type="text" class="J_accountTest"  id="loginAccount" placeholder="请输入您的账号">
+                                        </div>
+
+                                       
+                                        <div class="login-pwd">
+                                             <label for="loginPwd">
+                                                <div class="login-pwd-icon">
+                                                  
+                                                </div>
+                                            </label>
+                                            <input type="text" class="J_pwdTest" id="loginPwd"  placeholder="验证码">
+                                            <div class="login-obtain-pwd J_obtainPwd">获取验证码</div>
+                                        </div>
+
+                                        <div class="login-submit J_phoneSubmit">
+                                            <input type="submit" value="登录">
+                                        </div>
+                                    </form>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div id="audio-container">
+           <audio id="audio" class="player-audio" src=""  loop="loop" autoplay="autoplay" ></audio>
+        </div>        
+     </div>
+    <div id="modal-container"></div>
+    <script type="text/javascript" src="mod.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    
+    <!--SCRIPT_PLACEHOLDER-->
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <script type="text/javascript">
+        require('main');
+    </script>
+    
+
+</body>
+</html>

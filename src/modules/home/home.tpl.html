@@ -1,0 +1,107 @@
+{{#storyList}}
+
+	{{#rif this.type "==" "2"}}
+		{{#with storyvalue}}
+			<a  data-href="{{../../../HOST}}/page/player.html?type=story&storyId={{storyid}}&storyName={{storyname}}" href="#" id="storyLink" class="J_collect" data-type="home-recommend" data-alisname="{{storyname}}">
+			<section class="home-recommend"  data-type='story'>
+		
+
+				<p class="home-recommend-title i18n" data-i18n="home.recommend_title"></p>
+				
+					<div data-background="{{../coverurl}}" class="lazy lazy-fadeIn home-recommend-theme" >
+							<div class="home-theme-tag-{{../istoday}} story_bg">
+								<span class="tag-text">今日推荐-故事</span>
+							</div>
+					</div>
+				
+				<div class="home-theme-content">
+					<div class="box-container">
+						<div class="box-container-sub box-container-free home-theme-labels">
+							<!-- <span class="label-item">清新</span>
+							<span class="label-item">小公举</span>
+							<span class="label-item">梦幻</span> -->
+							<p class="home-theme-title">{{storyname}}</p>
+						</div>
+						
+					</div>
+
+
+					<p class="home-theme-subTitle">{{../subhead}}</p>
+					<div class="home-theme-playerNumber">
+							<i class="play-count-icon"></i>
+							<span class="play-count-text">{{playcount}}</span>
+					</div>
+					<div class="home-wake">
+							<i class="home-time-icon"></i>
+							<span class="home-theme-time">{{../../../storyTime}}</span>
+					</div>
+
+				</div>
+
+			</section>
+		{{/with}}
+	{{else}}
+		{{#with ablumvalue}}
+		<a data-href="{{../../../HOST}}/page/albumPage.html?type=album&id={{ablumid}}&albumName={{ablumname}}" href="#" id="albumLink" class="J_collect" data-type="home-recommend" data-alisname="{{ablumname}}">
+			<section class="home-recommend" data-type='album'>
+			
+				<p class="home-recommend-title i18n" data-i18n="home.recommend_title"></p>
+				
+					<div class="lazy lazy-fadeIn home-recommend-theme" data-background="{{../coverurl}}">
+						
+						<div class="home-albumStatus-{{../istoday}}">
+							<div class="home-theme-tag-true album_bg-true">
+								<span class="tag-text">今日推荐-专辑</span>
+							</div>
+
+							<div class="home-theme-tag-false album_bg-false">
+								<span class="tag-text">专辑</span>
+							</div>
+						</div>
+						
+						
+						
+					</div>
+				<!-- </a> -->
+				<div class="home-theme-content">
+					<div class="box-container">
+						<div class="box-container-sub box-container-free home-theme-labels">
+							<!-- <span class="label-item">清新</span>
+							<span class="label-item">小公举</span>
+							<span class="label-item">梦幻</span> -->
+							<p class="home-theme-title">{{ablumname}}</p>
+						</div>
+						
+					</div>
+
+
+					<p class="home-theme-subTitle">{{../subhead}}</p>
+					<div class="home-theme-playerNumber">
+							<i class="album-count-icon"></i>
+						{{#if storycount}}
+							<span class="play-count-text">{{storycount}}集</span>
+							{{else}}
+							<span class="play-count-text">0集</span>
+							{{/if}}
+					</div>
+					<div class="home-wake">
+							<i class="home-time-icon"></i>
+							<span class="home-theme-time">{{../../../albumTime}}</span>
+							
+					</div>
+
+				</div>
+				
+			</section>	
+			</a>
+		{{/with}}
+	{{/rif}}
+	
+{{/storyList}}
+
+
+
+
+
+
+
